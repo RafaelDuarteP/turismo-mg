@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@300;400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--color-6);
+}
+
+:root {
+  --color-1: #333333;
+  --color-2: #4f4f4f;
+  --color-3: #828282;
+  --color-4: #bdbdbd;
+  --color-5: #e0e0e0;
+  --color-6: #f2f2f2;
+  --stars: #f2c94c;
+}
+
+h1,
+button {
+  font-family: "Abril Fatface";
+  font-size: 72px;
+  color: var(--color-1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 98%;
+
+  letter-spacing: 0.004em;
+}
+
+h2,
+h3,
+textarea,
+input,
+p,
+a {
+  font-family: "Nunito";
+}
+
+.landing-page p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  min-width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-family: "Abril Fatface";
+  color: var(--color-1);
+  font-size: 1.5rem;
+  margin: 2px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: scale(0, 1); /*scale(width, height)como se eu tivesse amassado*/
+  transform-origin: left;
+  transition: transform 400ms ease-in-out;
+  background-color: var(--color-6);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.nav-link {
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0;
+  color: var(--color-1);
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--color-2);
+}
+
+.recomendation-btn {
+  background: var(--color-1);
+  color: var(--color-5);
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.recomendation-btn:hover{
+  opacity: 0.95;
+  color: var(--color-5);
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav .nav-link {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: black;
+  height: 2px;
+  width: 1.5em;
+  border-radius: 2px;
+  position: relative;
+  transition: 250ms ease-out;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 6px;
+}
+
+.nav-toggle-label span::after {
+  top: 6px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+  transform: rotate(90deg) translate(6px);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+  background: transparent;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+  transform: rotate(45deg);
+}
+
+.main {
+  max-width: 100vw;
+  padding-bottom: 20px;
+}
+
+section {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.landing-page {
+  padding-top: 60px;
+  /*background: url("https://images.pexels.com/photos/3824659/pexels-photo-3824659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+@media screen and (min-width: 950px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 3%;
+  }
+
+  nav {
+    position: unset;
+    text-align: center;
+    height: 100%;
+    transform: scale(1, 1);
+    transition: unset;
+    background: none;
+    align-items: center;
+  }
+  
+  .nav-list{
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+
+    }
+
+  .nav-link {
+    opacity: 1;
+    transition: unset;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+  }
+
+  .landing-page {
+    padding-top: 150px;
+  }
+}
+
+.landing-page h1,
+.landing-page p,
+.search-box {
+  max-width: 739px;
+  margin-bottom: 20px;
+  margin: 0 2% 20px 2%;
+}
+
+.search-box input {
+  width: 250px;
+  height: 45px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background-color: var(--color-4);
+  position: relative;
+}
+
+.search-box label {
+  position: absolute;
+  background: var(--color-2);
+  padding: 13.5px;
+  border-radius: 0 10px 10px 0;
+}
+
+/*.slide,
+.slide img {
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.slide img {
+  object-fit: cover;
+}
+
+.current,
+.current img {
+  width: 350px;
+  height: 400px;
+}*/
+
+.blog {
+  height: 100%;
+}
+
+.blog-container {
+  display: grid;
+	margin: 2%;
+	max-width: auto;
+	height: 100%;
+  grid-template-areas: 
+  "a b c d"
+  "e b f d"
+  "e g f h";
+  grid-gap: 5px;
+}
+
+#noticia-1 {
+  grid-area: a;
+}
+
+#noticia-2 {
+  grid-area: b;
+  min-height: 350px;
+}
+
+#noticia-2 .img img {
+  min-height: 350px;
+}
+
+#noticia-3 {
+  grid-area: c; 
+}
+
+#noticia-4 {
+  grid-area: d; 
+}
+
+#noticia-5 {
+  grid-area: e; 
+}
+
+#noticia-6 {
+  grid-area: f; 
+}
+
+#noticia-7 {
+  grid-area: g; 
+}
+
+#noticia-8 {
+  grid-area: h; 
+}
+
+.noticia {
+  position: relative;
+}
+
+.img {
+  width: 314px;
+  height: 100%;
+}
+
+.img img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 314px;
+  height: 100%;
+}
+
+
