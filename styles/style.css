@@ -9,21 +9,23 @@ body {
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--color-6);
 }
 
 :root {
+  --color-01: #AC0000;
+  --color-02: #BE0A0A;
+  --color-03: #C51414;
   --color-1: #333333;
-  --color-2: #4f4f4f;
+  --color-2: #4F4F4F;
   --color-3: #828282;
-  --color-4: #bdbdbd;
+  --color-4: #BDBDBD;
   --color-5: #e0e0e0;
   --color-6: #f2f2f2;
+  --color-7: #ffffff;
   --stars: #f2c94c;
 }
 
-h1,
-button {
+h1 {
   font-family: "Abril Fatface";
   font-size: 72px;
   color: var(--color-1);
@@ -49,19 +51,19 @@ a {
   line-height: 30px;
 }
 
+
+
 header {
   text-align: center;
   position: fixed;
   z-index: 999;
   width: 100vw;
   min-width: 100%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2);
+  /*background: var(--color-7);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);*/
 }
 
 .logo {
-  font-family: "Abril Fatface";
-  color: var(--color-1);
-  font-size: 1.5rem;
   margin: 2px;
 }
 
@@ -75,7 +77,7 @@ nav {
   transform: scale(0, 1); /*scale(width, height)como se eu tivesse amassado*/
   transform-origin: left;
   transition: transform 400ms ease-in-out;
-  background-color: var(--color-6);
+  background-color: var(--color-7);
 }
 
 .nav-list {
@@ -91,6 +93,7 @@ nav {
 
 .nav-link {
   font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
   opacity: 0;
   color: var(--color-1);
@@ -103,12 +106,12 @@ nav {
 
 .recomendation-btn {
   background: var(--color-1);
-  color: var(--color-5);
+  color: var(--color-7);
   padding: 6px;
   border-radius: 5px;
 }
 
-.recomendation-btn:hover{
+.recomendation-btn:hover {
   opacity: 0.95;
   color: var(--color-5);
 }
@@ -140,10 +143,10 @@ nav {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: black;
-  height: 2px;
+  background: var(--color-1);
+  height: 1px;
   width: 1.5em;
-  border-radius: 2px;
+  border-radius: 1px;
   position: relative;
   transition: 250ms ease-out;
 }
@@ -182,16 +185,7 @@ nav {
 section {
   max-width: 100vw;
   height: 100vh;
-}
-
-.landing-page {
-  padding-top: 60px;
-  /*background: url("https://images.pexels.com/photos/3824659/pexels-photo-3824659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-    no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;*/
+  padding: 0 3%;
 }
 
 @media screen and (min-width: 950px) {
@@ -200,10 +194,10 @@ section {
   }
 
   header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3%;
   }
 
   nav {
@@ -215,14 +209,13 @@ section {
     background: none;
     align-items: center;
   }
-  
-  .nav-list{
-      display: flex;
-      justify-content: flex-end;
-      margin: 0;
-      padding: 0;
 
-    }
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
 
   .nav-link {
     opacity: 1;
@@ -235,119 +228,300 @@ section {
     margin-bottom: 0;
   }
 
-  .landing-page {
-    padding-top: 150px;
-  }
+}
+
+.landing-page {
+  padding-top: 60px;
+  background-color: var(--color-6);
+  /*background: url('/images/vista-mg.jpg')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
 }
 
 .landing-page h1,
 .landing-page p,
 .search-box {
   max-width: 739px;
+  color: var(--color-1);
   margin-bottom: 20px;
   margin: 0 2% 20px 2%;
 }
 
+.landing-page p{
+  max-width: 602px;
+}
 .search-box input {
   width: 250px;
   height: 45px;
   border: none;
   border-radius: 10px 0 0 10px;
-  background-color: var(--color-4);
+  background-color: var(--color-7);
   position: relative;
+}
+
+#search::placeholder {
+  padding: 0 10px;
+  font-size: 15px;
 }
 
 .search-box label {
   position: absolute;
-  background: var(--color-2);
+  background: var(--color-1);
+  color: var(--color-7);
   padding: 13.5px;
   border-radius: 0 10px 10px 0;
 }
-
-/*.slide,
-.slide img {
-  width: 300px;
-  height: 350px;
-  border-radius: 10px;
-}
-
-.slide img {
-  object-fit: cover;
-}
-
-.current,
-.current img {
-  width: 350px;
-  height: 400px;
-}*/
 
 .blog {
   height: 100%;
 }
 
-.blog-container {
-  display: grid;
-	margin: 2%;
-	max-width: auto;
-	height: 100%;
-  grid-template-areas: 
-  "a b c d"
-  "e b f d"
-  "e g f h";
-  grid-gap: 5px;
-}
-
-#noticia-1 {
-  grid-area: a;
-}
-
-#noticia-2 {
-  grid-area: b;
-  min-height: 350px;
-}
-
-#noticia-2 .img img {
-  min-height: 350px;
-}
-
-#noticia-3 {
-  grid-area: c; 
-}
-
-#noticia-4 {
-  grid-area: d; 
-}
-
-#noticia-5 {
-  grid-area: e; 
-}
-
-#noticia-6 {
-  grid-area: f; 
-}
-
-#noticia-7 {
-  grid-area: g; 
-}
-
-#noticia-8 {
-  grid-area: h; 
-}
-
-.noticia {
-  position: relative;
-}
-
 .img {
-  width: 314px;
+  width: 100%;
   height: 100%;
 }
 
 .img img {
   object-fit: cover;
   border-radius: 5px;
-  width: 314px;
+  width: 100%;
   height: 100%;
 }
 
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
 
+@media screen and (min-width: 900px) {
+  .landing-page {
+    padding-top: 150px;
+  }
+
+  .blog-container {
+    display: grid;
+    margin: 2%;
+    max-width: auto;
+    height: 100%;
+    grid-template-areas:
+      "a b c d"
+      "e b f d"
+      "e g f h";
+    grid-gap: 5px;
+  }
+
+  #noticia-1 {
+    grid-area: a;
+  }
+
+  #noticia-2 {
+    grid-area: b;
+    min-height: 350px;
+  }
+
+  #noticia-2 .img img {
+    min-height: 350px;
+  }
+
+  #noticia-3 {
+    grid-area: c;
+  }
+
+  #noticia-4 {
+    grid-area: d;
+  }
+
+  #noticia-5 {
+    grid-area: e;
+  }
+
+  #noticia-6 {
+    grid-area: f;
+  }
+
+  #noticia-7 {
+    grid-area: g;
+  }
+
+  #noticia-8 {
+    grid-area: h;
+  }
+
+  .noticia {
+    position: relative;
+  }
+
+  .img {
+    width: 314px;
+    height: 100%;
+  }
+
+  .img img {
+    object-fit: cover;
+    border-radius: 5px;
+    width: 314px;
+    height: 100%;
+  }
+}
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.contact-cover {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 3%;
+}
+
+.form input {
+  background-color: var(--color-5);
+  border: none;
+  border-radius: 2px;
+  margin: 5px;
+  height: 45px;
+}
+
+#name-ipt {
+  width: 80%;
+}
+
+#email-ipt {
+  width: 95%;
+}
+
+#message-ipt {
+  height: 150px;
+}
+
+.form-btn {
+  align-self: flex-end;
+  font-size: 24px;
+  height: 50px;
+  width: 150px;
+  border: none;
+  background-color: var(--color-2);
+  color: var(--color-7);
+  font-family: 'Abril Fatface';
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 1100px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 20px;
+    padding: 0 3% 3% 0;
+  }
+
+  .contact-cover {
+    display: block;
+    background: url('/images/landing-page.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  }
+
+  .form {
+    margin: 5%;
+  }
+
+  .form input {
+    height: 55px;
+  }
+
+  #message-ipt {
+    height: 180px;
+  }
+}
+
+.calculator {
+  height: 100%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.calc span {
+  background: var(--color-1);
+  height: 1px;
+  width: 200px;
+  display: block;
+  margin: 20px 0;
+}
+
+.transport-options button,
+.transport label,
+.fa-bed,
+.fa-calendar-alt{
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: var(--color-2);
+}
+
+.fa-plane {
+  transform: rotate(-90deg);
+}
+
+.transport {
+  display: flex;
+  flex-direction: column;
+}
+
+.transport-options button{
+  padding: 10px 15px;
+}
+
+.from-ipt,
+.going-ipt,
+.title,
+.dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dates {
+  flex-direction: column;
+}
+
+.fa-bed, 
+.fa-calendar-alt {
+  margin-right: 10px;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 950px) {
+  .calc {
+    flex-direction: row;
+  }
+
+  .calc span {
+    height: 150px;
+    width: 1px;
+    margin: 0 50px;
+  }
+}

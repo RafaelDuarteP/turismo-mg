@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/styles/glider.min.css" />
+    <link rel="icon" type="image/svg" href="/images/icons/favicon.svg">
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Turismo MG</title>
   </head>
   <body>
     <header class="header">
-      <div class="logo">Logo</div>
+      <div class="logo">
+        <img src="/images/icons/logo.svg" alt="MG">
+      </div>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <label for="nav-toggle" class="nav-toggle-label">
         <span></span>
@@ -57,42 +59,6 @@
             <i class="fas fa-search"></i>
           </label>
         </div>
-      </section>
-      
-      <section class="destaque">
-        <h1>Destinos mais procurados</h1>
-        <!--<div class="glider-contain">
-          <div class="glider">
-            <div class="slide" dataindex="0">
-              <img src="/images/capitolio.png" alt="capitolio">
-              <h3>Capitolio</h3>
-            </div>
-            <div class="slide current"  dataindex="1">
-              <img src="/images/tiradentes-2.jpg" alt="tiradentes">
-              <h3>Tiradentes</h3>
-            </div>
-            <div class="slide" dataindex="2">
-              <img src="/images/monte-verde.jpg" alt="Monte Verde">
-              <h3>Monte Verde</h3>
-            </div>
-            <div class="slide" dataindex="3">
-              <img src="/images/congonhas.jpg" alt="Congonhas">
-              <h3>Congonhas</h3>
-            </div>
-            <div class="slide" dataindex="4">
-              <img src="/images/inhotim-2.jpg" alt="Inhotim">
-              <h3>Brumadinho</h3>
-            </div>
-          </div>
-
-          <button aria-label="Previous" class="glider-prev">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button aria-label="Next" class="glider-next">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-          <div role="tablist" class="dots"></div>
-        </div>-->
       </section>
 
       <section class="blog">
@@ -151,19 +117,66 @@
 
       </section>
 
-      <section class="calc">
+      <section class="calculator">
         <h1>Calculadora de Gastos</h1>
+        <div class="calc">
+        <div class="transport">
+          <h3>Selecione o meio de transporte</h3>
+          <div class="transport-options">
+            <button class="car"><i class="fas fa-car"></i></button>
+            <button class="bus"><i class="fas fa-bus"></i></button>
+            <button class="airplane"><i class="fas fa-plane"></i></button>
+            <button class="train"><i class="fas fa-train"></i></button>
+          </div>
+          <div class="from-ipt">
+          <label for="come-from"><i class="far fa-circle"></i></label>
+          <input type="text" id="come-from">
+        </div>
+        <div class="going-ipt">
+          <label for="going-to"><i class="fas fa-map-marker-alt"></i> </label>
+          <input type="text" id="going-to">
+        </div>
+        </div>
+        <span></span>
+        <div class="dates">
+          <div class="title">
+            <i class="far fa-calendar-alt"></i>
+            <h3>Selecione sua estadia</h3>
+          </div>
+          <label for="stay">Insira a quantidade de dias</label>
+          <input type="number" name="stay" id="stay">
+        </div>
+        <span></span>
+        <div class="place">
+          <div class="title">
+            <i class="fas fa-bed"></i>
+            <h3>Selecione sua estadia</h3>
+          </div>
+          <select name="places-btn" id="places-btn">
+            <option value="">Selecione</option>
+            <option value="hotel">Hotel</option>
+            <option value="farm-hotel">Hotel Fazenda</option>
+            <option value="cottage">Chalé</option>
+            <option value="hostel">Hostel</option>
+            <option value="none">Nenhum desses</option>
+          </select>
+        </div>
+      </div>
+
       </section>
 
       <section class="contact">
-        <h1>Recomende um destino</h1>
+        <div class="contact-cover">
+        </div>
+        <div class="form">
+          <h1>Envie sua recomendação</h1>
+          <input type="text" name="name" id="name-ipt">
+          <input type="email" name="email" id="email-ipt">
+          <input type="text" name="subject" id="subject-ipt">
+          <input type="text" name="message" id="message-ipt">
+          <button class="form-btn">ENVIAR</button>
+        </div>
       </section>
-
-      <section class="about">
-        <h1>Sobre Nós</h1>
-
-      </section>
-
     </main>
     <!--
     <footer>
