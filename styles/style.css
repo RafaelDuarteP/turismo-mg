@@ -59,8 +59,8 @@ header {
   z-index: 999;
   width: 100vw;
   min-width: 100%;
-  /*background: var(--color-7);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);*/
+  background: var(--color-6);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -276,6 +276,7 @@ section {
 }
 
 .blog {
+  padding-top: 30px;
   height: 100%;
 }
 
@@ -449,20 +450,22 @@ section {
   }
 }
 
+/* CALCULadotra*/
+
 .calculator {
   height: 100%;
   padding-bottom: 3%;
+  padding-top: 20px;
   text-align: center;
 }
-
 .calc {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
+  margin: 35px 0;
 }
-
 .calc span {
   background: var(--color-1);
   height: 1px;
@@ -470,7 +473,7 @@ section {
   display: block;
   margin: 20px 0;
 }
-
+/*========= ICONS =========*/
 .transport-options button,
 .transport label,
 .fa-bed,
@@ -480,38 +483,53 @@ section {
   font-size: 30px;
   color: var(--color-2);
 }
-
-.fa-plane {
-  transform: rotate(-90deg);
-}
-
-.transport {
-  display: flex;
-  flex-direction: column;
-}
-
 .transport-options button{
   padding: 10px 15px;
 }
-
-.from-ipt,
-.going-ipt,
-.title,
-.dates {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.fa-plane {
+  transform: rotate(-90deg);
 }
-
-.dates {
-  flex-direction: column;
-}
-
 .fa-bed, 
 .fa-calendar-alt {
   margin-right: 10px;
-  font-size: 40px;
+  font-size: 36px;
+}
+.transport label {
+  margin: 4px;
+  font-size: 25px; 
+}
+.fa-map-marker-alt {
+  margin: 0 3px;
+}
+/*========= INPUTS =========*/
+.calc input,
+.calc select {
+  background: var(--color-6);
+  border: none;
+  height: 32px;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 3px;
+  font-family: 'Nunito';
+  padding-left: 10px;
+}
+.transport input {
+  width: 200px;
+}
+.dates input {
+  width: 50px;
+}
+/*========= fonts =========*/
+.calc h3 {
+  color: var(--color-2);
+}
+.dates label {
+  font-family: 'Nunito';
+  font-weight: 300;
+  font-size: 1rem;
+}
+.title {
+  margin: 5px;
 }
 
 @media screen and (min-width: 950px) {
@@ -524,4 +542,5 @@ section {
     width: 1px;
     margin: 0 50px;
   }
+  
 }
