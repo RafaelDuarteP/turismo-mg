@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./Scripts/src/scripts/main.js"></script>
-    <title>Minas Turismo</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="logo">
-        <img src="./images/icons/logo.svg" alt="MG">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
+  <link rel="stylesheet" href="./styles/style.css" />
+  <script src="./Scripts/images.js"></script>
+  <title>Minas Turismo</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="./images/icons/logo.svg" alt="MG">
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="#procurados">Mais Procurados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#atracoes">Atrações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#hospedagens">Hospedagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">Sobre MG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#calculadora">Calculadora</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link recomendation-btn" href="#recomende">Recomende um Destino</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="landing-page">
+      <h1 class="landing-title">Venha descobrir Minas Gerais!</h1>
+      <p>
+        Em Minas você vai desfrutar de queijos artesanais, doces fantasticos,
+        bares celebres, cachoeiras de tirar o folego e muito mais!
+      </p>
+      <div class="search-box">
+        <input type="text" class="search-text" placeholder="Pesquisar..." id="search" />
+        <label for="search">
+          <i class="fas fa-search"></i>
+        </label>
       </div>
     </section>
 
