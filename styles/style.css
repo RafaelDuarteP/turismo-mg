@@ -579,3 +579,101 @@ section {
     margin: 0 50px;
   }
 }
+.about-us {
+  background: var(--color-6);
+  height: 100%;
+}
+
+.about-us p {
+  padding-bottom: 25px;
+}
+.dev-card {
+	background: #ffffff;
+	position: relative;
+	padding-left: 75px;
+	margin-left: 75px;
+	height: 150px;
+	margin-bottom: 25px;
+}
+.dev-pic {
+  border-radius: 50%;
+	position: absolute;
+	left: -75px;
+}
+.dev-pic img {
+  width: 150px;
+	object-fit: cover;
+  border-radius: 50%;
+}
+.card-dev-txt {
+  text-align: center;
+  padding-top: 5px;
+}
+.card-dev-txt h2 {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 25px;
+  letter-spacing: 0.004em;
+  color: var(--color-1);
+}
+.card-dev-txt h4 {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+.card-dev-txt p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 5px;
+}
+.card-dev-social-media a {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--color-01);
+}
+.fa-at,
+.fa-linkedin-in {
+  color: var(--color-7);
+  background: var(--color-01);
+  padding: 5px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 800px){
+	.team-cards{
+		display: flex;
+		justify-content:center;
+		flex-wrap: wrap;
+	}
+	.dev-card {
+	padding-left: 0;
+	padding-top: 80px;
+	margin-left: 20px;
+	margin-top:75px;
+	width: 340px;
+	height: 250px;
+}
+	.dev-pic {
+		left: 95px;
+		top: -75px;
+}
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  align-items: center;
+  background: var(--color-7);
+}
+
+footer p {
+  font-size: 15px;
+  color: var(--color-01);
+}

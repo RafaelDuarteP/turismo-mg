@@ -1,150 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./Scripts/images.js"></script>
-    <title>Minas Turismo</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="logo">
-        <img src="./images/icons/logo.svg" alt="MG">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
+  <link rel="stylesheet" href="./styles/style.css" />
+  <script src="./Scripts/images.js"></script>
+  <title>Minas Turismo</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="./images/icons/logo.svg" alt="MG">
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="#procurados">Mais Procurados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#atracoes">Atrações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#hospedagens">Hospedagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">Sobre MG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#calculadora">Calculadora</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link recomendation-btn" href="#recomende">Recomende um Destino</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="landing-page">
+      <h1 class="landing-title">Venha descobrir Minas Gerais!</h1>
+      <p>
+        Em Minas você vai desfrutar de queijos artesanais, doces fantasticos,
+        bares celebres, cachoeiras de tirar o folego e muito mais!
+      </p>
+      <div class="search-box">
+        <input type="text" class="search-text" placeholder="Pesquisar..." id="search" />
+        <label for="search">
+          <i class="fas fa-search"></i>
+        </label>
       </div>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-      </label>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="#procurados">Mais Procurados</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#atracoes">Atrações</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#hospedagens">Hospedagens</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">Sobre MG</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#calculadora">Calculadora</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link recomendation-btn" href="#recomende"
-              >Recomende um Destino</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="landing-page">
-        <h1 class="landing-title">Venha descobrir Minas Gerais!</h1>
-        <p>
-          Em Minas você vai desfrutar de queijos artesanais, doces fantasticos,
-          bares celebres, cachoeiras de tirar o folego e muito mais!
-        </p>
-        <div class="search-box">
-          <input
-            type="text"
-            class="search-text"
-            placeholder="Pesquisar..."
-            id="search"
-          />
-          <label for="search">
-            <i class="fas fa-search"></i>
-          </label>
-        </div>
-      </section>
+    </section>
 
-      <section class="blog">
-        <h1>Sobre MG</h1>
-        <div class="blog-container">
+    <section class="blog">
+      <h1>Sobre MG</h1>
+      <div class="blog-container">
 
-          <div class="noticia" id="noticia-1">
-            <div class="img">
-              <img src="./images/lago-encantado.png" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>Natureza de Minas</h3>
-            </div>
+        <div class="noticia" id="noticia-1">
+          <div class="img">
+            <img src="./images/lago-encantado.png" alt="" srcset="">
           </div>
-
-          <div class="noticia" id="noticia-2">
-            <div class="img">
-              <img src="./images/pao-de-queijo.png" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>Entre serras e queijos</h3>
-            </div>
-          </div>
-
-          <div class="noticia" id="noticia-3">
-            <div class="img">
-              <img src="./images/montanha.png" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>Montanhas e Trilhas</h3>
-            </div>
-          </div>
-
-          <div class="noticia" id="noticia-4">
-            <div class="img">
-              <img src="./images/sao-joao-del-rey.png" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>Cidades Charmosas</h3>
-            </div>
-          </div>
-
-          <div class="noticia" id="noticia-5">
-            <div class="img">
-              <img src="./images/comida-mineira.png" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>Natureza Mineira</h3>
-            </div>
-          </div>
-
-          <div class="noticia" id="noticia-6">
-            <div class="img">
-              <img src="./images/tiradentes.png" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>A noite em Minas Gerais</h3>
-            </div>
-          </div>
-
-          <div class="noticia" id="noticia-7">
-            <div class="img">
-              <img src="./images/paraquedas.png" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>Aventuras em MG</h3>
-            </div>
-          </div>
-
-          <div class="noticia" id="noticia-8">
-            <div class="img">
-              <img src="./images/capitolio.jpg" alt="" srcset="">
-            </div>
-            <div class="title-article">
-              <h3>Praia Mineira</h3>
-            </div>
-          </div>
+          <div class="title-article">
+            <h3>Natureza de Minas</h3>
           </div>
         </div>
 
-      </section>
+        <div class="noticia" id="noticia-2">
+          <div class="img">
+            <img src="./images/pao-de-queijo.png" alt="" srcset="">
+          </div>
+          <div class="title-article">
+            <h3>Entre serras e queijos</h3>
+          </div>
+        </div>
 
-      <section class="calculator">
-        <h1>Calculadora de Gastos</h1>
-        <div class="calc">
+        <div class="noticia" id="noticia-3">
+          <div class="img">
+            <img src="./images/montanha.png" alt="" srcset="">
+          </div>
+          <div class="title-article">
+            <h3>Montanhas e Trilhas</h3>
+          </div>
+        </div>
+
+        <div class="noticia" id="noticia-4">
+          <div class="img">
+            <img src="./images/sao-joao-del-rey.png" alt="" srcset="">
+          </div>
+          <div class="title-article">
+            <h3>Cidades Charmosas</h3>
+          </div>
+        </div>
+
+        <div class="noticia" id="noticia-5">
+          <div class="img">
+            <img src="./images/comida-mineira.png" alt="" srcset="">
+          </div>
+          <div class="title-article">
+            <h3>Natureza Mineira</h3>
+          </div>
+        </div>
+
+        <div class="noticia" id="noticia-6">
+          <div class="img">
+            <img src="./images/tiradentes.png" alt="" srcset="">
+          </div>
+          <div class="title-article">
+            <h3>A noite em Minas Gerais</h3>
+          </div>
+        </div>
+
+        <div class="noticia" id="noticia-7">
+          <div class="img">
+            <img src="./images/paraquedas.png" alt="" srcset="">
+          </div>
+          <div class="title-article">
+            <h3>Aventuras em MG</h3>
+          </div>
+        </div>
+
+        <div class="noticia" id="noticia-8">
+          <div class="img">
+            <img src="./images/capitolio.jpg" alt="" srcset="">
+          </div>
+          <div class="title-article">
+            <h3>Praia Mineira</h3>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+
+    <section class="calculator">
+      <h1>Calculadora de Gastos</h1>
+      <div class="calc">
         <div class="transport">
           <h3>Selecione o meio de transporte</h3>
           <div class="transport-options">
@@ -154,13 +149,13 @@
             <button class="train"><i class="fas fa-train"></i></button>
           </div>
           <div class="from-ipt">
-          <label for="come-from"><i class="far fa-circle"></i></label>
-          <input type="text" id="come-from" placeholder="Saindo de...">
-        </div>
-        <div class="going-ipt">
-          <label for="going-to"><i class="fas fa-map-marker-alt"></i> </label>
-          <input type="text" id="going-to" placeholder="Indo para...">
-        </div>
+            <label for="come-from"><i class="far fa-circle"></i></label>
+            <input type="text" id="come-from" placeholder="Saindo de...">
+          </div>
+          <div class="going-ipt">
+            <label for="going-to"><i class="fas fa-map-marker-alt"></i> </label>
+            <input type="text" id="going-to" placeholder="Indo para...">
+          </div>
         </div>
         <span></span>
         <div class="dates">
@@ -188,33 +183,162 @@
         </div>
       </div>
       <button class="calc-btn">CALCULAR</button>
-      </section>
+    </section>
 
-      <section class="contact">
-        <div class="contact-cover">
+    <section class="contact">
+      <div class="contact-cover">
+      </div>
+      <div class="form">
+        <h1>Envie sua recomendação</h1>
+        <input type="text" name="name" id="name-ipt" class="contact-ipt" placeholder="Seu nome completo">
+        <input type="email" name="email" id="email-ipt" class="contact-ipt" placeholder="Seu e-mail">
+        <input type="text" name="subject" id="subject-ipt" class="contact-ipt" placeholder="Assunto">
+        <input type="text" name="message" id="message-ipt" class="contact-ipt" placeholder="Digite aqui...">
+        <button class="form-btn">ENVIAR</button>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <h1>Sobre Nós</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+      <div class="team-cards">
+        <div class="dev-card">
+          <div class="dev-pic">
+            <img
+              src="images/anaclara.jpeg"
+              alt="ana clara">
+          </div>
+
+          <div class="card-dev-txt">
+            <h2>Ana Clara Fonseca</h2>
+            <h4>Front-end Developer</h4>
+            <div class="card-dev-social-media">
+              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> </a>
+              <a href="mailto:claracamposbh@hotmail.com">
+                <i class="fas fa-at"></i>
+              </a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          </div>
         </div>
-        <div class="form">
-          <h1>Envie sua recomendação</h1>
-          <input type="text" name="name" id="name-ipt" class="contact-ipt" placeholder="Seu nome completo"> 
-          <input type="email" name="email" id="email-ipt" class="contact-ipt" placeholder="Seu e-mail">
-          <input type="text" name="subject" id="subject-ipt" class="contact-ipt" placeholder="Assunto">
-          <input type="text" name="message" id="message-ipt" class="contact-ipt" placeholder="Digite aqui...">
-          <button class="form-btn">ENVIAR</button>
+        <div class="dev-card">
+          <div class="dev-pic">
+            <img
+              src="images/thales.jpg"
+              alt="thales">
+          </div>
+
+          <div class="card-dev-txt">
+            <h2>Thales Alves</h2>
+            <h4>Função</h4>
+            <div class="card-dev-social-media">
+              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> </a>
+              <a href="mailto:claracamposbh@hotmail.com">
+                <i class="fas fa-at"></i>
+              </a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          </div>
         </div>
-      </section>
-    </main>
-    <!--
-    <footer>
-      <p>
-        Trabalho Interdisciplinar - Engenharia de Software - 1º período - PUC
-        MINAS
-      </p>
-      <div class="logo-footer">Logo</div>
-    </footer>-->
-    <script
-      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
-      data-search-pseudo-elements
-    ></script>
-    <script src="scripts/build/js/turismomg.min.js"></script>
-  </body>
+        <div class="dev-card">
+          <div class="dev-pic">
+            <img
+              src="images/rafael.jpg"
+              alt="Rafael">
+          </div>
+
+          <div class="card-dev-txt">
+            <h2>Rafael Duarte</h2>
+            <h4>Front-end Developer</h4>
+            <div class="card-dev-social-media">
+              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> </a>
+              <a href="mailto:claracamposbh@hotmail.com">
+                <i class="fas fa-at"></i>
+              </a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          </div>
+        </div>
+        <div class="dev-card">
+          <div class="dev-pic">
+            <img
+              src="images/gustavo.jpg"
+              alt="gustavo">
+          </div>
+
+          <div class="card-dev-txt">
+            <h2>Gustavo Canabrava</h2>
+            <h4>Front-end Developer</h4>
+            <div class="card-dev-social-media">
+              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> </a>
+              <a href="mailto:claracamposbh@hotmail.com">
+                <i class="fas fa-at"></i>
+              </a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          </div>
+        </div>
+        <div class="dev-card">
+          <div class="dev-pic">
+            <img
+              src="./images/nathan.jpg"
+              alt="nathan">
+          </div>
+
+          <div class="card-dev-txt">
+            <h2>Nathan Gonçalves</h2>
+            <h4>Função</h4>
+            <div class="card-dev-social-media">
+              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> </a>
+              <a href="mailto:claracamposbh@hotmail.com">
+                <i class="fas fa-at"></i>
+              </a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>
+      Trabalho Interdisciplinar - Engenharia de Software - 1º período - PUC
+      MINAS
+    </p>
+    <div class="logo-footer">
+      <img src="/images/icons/logo.svg" alt="Logo">
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/c634ace556.js" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-search-pseudo-elements></script>
+  <script src="scripts/build/js/turismomg.min.js"></script>
+</body>
+
 </html>
