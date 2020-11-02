@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@200;300;400;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +15,7 @@ body {
   --color-01: #AC0000;
   --color-02: #BE0A0A;
   --color-03: #C51414;
+  --color-04: #ac0000c0;
   --color-1: #333333;
   --color-2: #4F4F4F;
   --color-3: #828282;
@@ -28,13 +29,17 @@ body {
 h1 {
   font-family: "Abril Fatface";
   font-size: 72px;
-  color: var(--color-1);
+  color: var(--color-01);
   font-style: normal;
   font-weight: normal;
   font-size: 72px;
   line-height: 98%;
 
   letter-spacing: 0.004em;
+}
+p {
+  font-size: 20px;
+  line-height: 30px;
 }
 
 h2,
@@ -46,12 +51,17 @@ a {
   font-family: "Nunito";
 }
 
-.landing-page p {
-  font-size: 20px;
-  line-height: 30px;
+@media screen and (max-width: 800px){
+  h1 {
+    font-size: 52px;
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 26px;
+  }
+
 }
-
-
 
 header {
   text-align: center;
@@ -59,7 +69,7 @@ header {
   z-index: 999;
   width: 100vw;
   min-width: 100%;
-  background: var(--color-6);
+  background: var(--color-7);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -96,16 +106,16 @@ nav {
   font-weight: 500;
   text-decoration: none;
   opacity: 0;
-  color: var(--color-1);
+  color: var(--color-01);
   transition: opacity 150ms ease-in-out;
 }
 
 .nav-link:hover {
-  color: var(--color-2);
+  color: var(--color-03);
 }
 
 .recomendation-btn {
-  background: var(--color-1);
+  background: var(--color-01);
   color: var(--color-7);
   padding: 6px;
   border-radius: 5px;
@@ -231,21 +241,21 @@ section {
 }
 
 .landing-page {
-  padding-top: 60px;
+  padding-top: 120px;
   background-color: var(--color-6);
-  /*background: url('/images/vista-mg.jpg')
+  background: url('../images/landing-page-2.jpg')
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;*/
+  background-size: cover;
 }
 
 .landing-page h1,
 .landing-page p,
 .search-box {
   max-width: 739px;
-  color: var(--color-1);
+  color: var(--color-7);
   margin-bottom: 20px;
   margin: 0 2% 20px 2%;
 }
@@ -269,27 +279,46 @@ section {
 
 .search-box label {
   position: absolute;
-  background: var(--color-1);
+  background: var(--color-03);
   color: var(--color-7);
   padding: 13.5px;
   border-radius: 0 10px 10px 0;
 }
 
 .blog {
-  padding-top: 30px;
   height: 100%;
+  padding-top: 30px;
+}
+
+.noticia {
+  position: relative;
+  margin: 5px;
+}
+.title-article {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  text-shadow: -4px 5px 5px rgba(0, 0, 0, 0.3);
+  color: var(--color-7);
+}
+
+.title-article h3{
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: -0.015em;
 }
 
 .img {
   width: 100%;
-  height: 100%;
+  padding-bottom: 5px;
 }
 
 .img img {
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 1px;
   width: 100%;
-  height: 100%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .blog-container {
@@ -297,17 +326,17 @@ section {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 900px) {
-  .landing-page {
-    padding-top: 150px;
+  .landing-page{
+    padding-top: 200px;
   }
-
   .blog-container {
     display: grid;
     margin: 2%;
-    max-width: auto;
+    max-width: 100vw;
     height: 100%;
     grid-template-areas:
       "a b c d"
@@ -358,14 +387,14 @@ section {
   }
 
   .img {
-    width: 314px;
+    max-width: 314px;
     height: 100%;
   }
 
   .img img {
     object-fit: cover;
     border-radius: 5px;
-    width: 314px;
+    max-width: 314px;
     height: 100%;
   }
 }
@@ -395,6 +424,11 @@ section {
   border-radius: 2px;
   margin: 5px;
   height: 45px;
+  padding-left: 25px;
+}
+.contact-ipt::placeholder {
+  font-weight: 600;
+  font-size: 15px;
 }
 
 #name-ipt {
@@ -407,15 +441,17 @@ section {
 
 #message-ipt {
   height: 150px;
+  padding-bottom: 125px;
 }
 
-.form-btn {
+.form-btn,
+.calc-btn {
   align-self: flex-end;
   font-size: 24px;
   height: 50px;
   width: 150px;
   border: none;
-  background-color: var(--color-2);
+  background-color: var(--color-02);
   color: var(--color-7);
   font-family: 'Abril Fatface';
   border-radius: 3px;
@@ -431,7 +467,7 @@ section {
 
   .contact-cover {
     display: block;
-    background: url('/images/landing-page.jpg') no-repeat;
+    background: url("../images/landing-page.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -481,7 +517,7 @@ section {
   background: transparent;
   border: none;
   font-size: 30px;
-  color: var(--color-2);
+  color: var(--color-04);
 }
 .transport-options button{
   padding: 10px 15px;
@@ -542,5 +578,4 @@ section {
     width: 1px;
     margin: 0 50px;
   }
-  
 }
