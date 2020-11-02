@@ -252,8 +252,7 @@ section {
 }
 
 .landing-page h1,
-.landing-page p,
-.search-box {
+.landing-page p {
   max-width: 739px;
   color: var(--color-7);
   margin-bottom: 20px;
@@ -263,27 +262,7 @@ section {
 .landing-page p{
   max-width: 602px;
 }
-.search-box input {
-  width: 250px;
-  height: 45px;
-  border: none;
-  border-radius: 10px 0 0 10px;
-  background-color: var(--color-7);
-  position: relative;
-}
 
-#search::placeholder {
-  padding: 0 10px;
-  font-size: 15px;
-}
-
-.search-box label {
-  position: absolute;
-  background: var(--color-03);
-  color: var(--color-7);
-  padding: 13.5px;
-  border-radius: 0 10px 10px 0;
-}
 
 .blog {
   height: 100%;

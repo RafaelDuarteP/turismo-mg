@@ -1,0 +1,36 @@
+/**
+ * components/_search.scss
+ */
+
+#search::placeholder {
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.search-box {
+  max-width: 739px;
+  color: var(--color-7);
+  margin-bottom: 20px;
+  margin: 0 2% 20px 2%;
+
+  label {
+    position: absolute;
+    background: var(--color-03);
+    color: var(--color-7);
+    padding: 13.5px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  input {
+    width: 250px;
+    height: 45px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--color-7);
+    position: relative;
+  }
+
+  .results {
+    
+  }
+}

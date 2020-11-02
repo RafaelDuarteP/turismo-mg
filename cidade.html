@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Minas Turismo</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./images/icons/logo.svg" alt="MG">
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#procurados">Mais Procurados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#atracoes">Atrações</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#hospedagens">Hospedagens</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Sobre MG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#calculadora">Calculadora</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link recomendation-btn" href="#recomende"
+              >Recomende um Destino</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="landing-page">
+        <h1 class="landing-title" id="cityName">Nome da cidade</h1>
+        <p id="cityDetails">
+          Descrição da cidade
+        </p>
+      </section>
+
+      <section class="city-info" id="cityInfo">
+        
+
+
+      </section>
+
+      <section class="calculator">
+        <h1>Calculadora de Gastos</h1>
+        <div class="calc">
+        <div class="transport">
+          <h3>Selecione o meio de transporte</h3>
+          <div class="transport-options">
+            <button class="car"><i class="fas fa-car"></i></button>
+            <button class="bus"><i class="fas fa-bus"></i></button>
+            <button class="airplane"><i class="fas fa-plane"></i></button>
+            <button class="train"><i class="fas fa-train"></i></button>
+          </div>
+          <div class="from-ipt">
+          <label for="come-from"><i class="far fa-circle"></i></label>
+          <input type="text" id="come-from" placeholder="Saindo de...">
+        </div>
+        <div class="going-ipt">
+          <label for="going-to"><i class="fas fa-map-marker-alt"></i> </label>
+          <input type="text" id="going-to" placeholder="Indo para...">
+        </div>
+        </div>
+        <span></span>
+        <div class="dates">
+          <div class="title">
+            <i class="far fa-calendar-alt"></i>
+            <h3>Selecione sua estadia</h3>
+          </div>
+          <label for="stay">Insira a quantidade de dias</label>
+          <input type="number" name="stay" id="stay">
+        </div>
+        <span></span>
+        <div class="place">
+          <div class="title">
+            <i class="fas fa-bed"></i>
+            <h3>Selecione sua estadia</h3>
+          </div>
+          <select name="places-btn" id="places-btn">
+            <option value="">Selecione</option>
+            <option value="hotel">Hotel</option>
+            <option value="farm-hotel">Hotel Fazenda</option>
+            <option value="cottage">Chalé</option>
+            <option value="hostel">Hostel</option>
+            <option value="none">Nenhum desses</option>
+          </select>
+        </div>
+      </div>
+      <button class="calc-btn">CALCULAR</button>
+      </section>
+
+      <section class="contact">
+        <div class="contact-cover">
+        </div>
+        <div class="form">
+          <h1>Envie sua recomendação</h1>
+          <input type="text" name="name" id="name-ipt" class="contact-ipt" placeholder="Seu nome completo"> 
+          <input type="email" name="email" id="email-ipt" class="contact-ipt" placeholder="Seu e-mail">
+          <input type="text" name="subject" id="subject-ipt" class="contact-ipt" placeholder="Assunto">
+          <input type="text" name="message" id="message-ipt" class="contact-ipt" placeholder="Digite aqui...">
+          <button class="form-btn">ENVIAR</button>
+        </div>
+      </section>
+    </main>
+    <!--
+    <footer>
+      <p>
+        Trabalho Interdisciplinar - Engenharia de Software - 1º período - PUC
+        MINAS
+      </p>
+      <div class="logo-footer">Logo</div>
+    </footer>-->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      data-search-pseudo-elements
+    ></script>
+    <script src="scripts/build/js/turismomg.min.js"></script>
+  </body>
+</html>
