@@ -1,0 +1,74 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "globals": {
+        "ENV": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "comma-dangle": [
+            "error",
+            "only-multiline"
+        ]
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*.test.js"
+        ],
+        "env": {
+          "mocha": true
+        },
+        "plugins": ["mocha"],
+        "rules": {
+          "mocha/handle-done-callback": "error",
+          "mocha/no-exports": "error",
+          "mocha/no-identical-title": "error",
+          "mocha/no-skipped-tests": "warn",
+          "mocha/no-setup-in-describe": "warn",
+          "indent": [
+              "error",
+              2
+          ],
+          "linebreak-style": [
+              "error",
+              "unix"
+          ],
+          "quotes": [
+              "error",
+              "single"
+          ],
+          "semi": [
+              "error",
+              "always"
+          ],
+          "comma-dangle": [
+              "error",
+              "only-multiline"
+          ]
+        }
+      }
+    ]
+}
