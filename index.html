@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
   <link rel="stylesheet" href="./styles/style.css" />
-  <script src="./Scripts/images.js"></script>
+  <link rel="stylesheet" href="./scripts/build/styles.min.css" />
   <title>Minas Turismo</title>
 </head>
 
@@ -50,10 +50,15 @@
         bares celebres, cachoeiras de tirar o folego e muito mais!
       </p>
       <div class="search-box">
-        <input type="text" class="search-text" placeholder="Pesquisar..." id="search" />
-        <label for="search">
-          <i class="fas fa-search"></i>
-        </label>
+        <span class="container">
+          <input type="text" class="search-text" placeholder="Pesquisar..." id="search" />
+          <label for="search">
+            <i class="fas fa-search"></i>
+          </label>
+        </span>
+        <span class="results" id="searchResultBox">
+          <span class="result-count">0 resultados encontrados:</span>
+        </span>
       </div>
     </section>
 
@@ -338,7 +343,7 @@
   </footer>
   <script src="https://kit.fontawesome.com/c634ace556.js" crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-search-pseudo-elements></script>
-  <script src="scripts/build/js/turismomg.min.js"></script>
+  <script src="scripts/build/turismomg.min.js"></script>
 </body>
 
 </html>
