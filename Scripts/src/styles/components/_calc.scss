@@ -1,0 +1,31 @@
+/**
+ * components/_calc.scss
+ */
+
+.calc-loading {
+  visibility: hidden;
+  
+  color: var(--color-03);
+  font-size: 2rem;
+
+  &.-show {
+    visibility: visible;
+  }
+}
+
+.calc-results {
+  visibility: hidden;
+  margin: 20px 0;
+
+  strong {
+    color: var(--color-03);
+  }
+
+  .p-top {
+    font-size: 1.5rem;
+  }
+
+  &.-show {
+    visibility: visible;
+  }
+}

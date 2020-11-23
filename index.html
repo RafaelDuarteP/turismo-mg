@@ -146,7 +146,7 @@
       <h1>Calculadora de Gastos</h1>
       <div class="calc">
         <div class="transport">
-          <h3>Selecione o meio de transporte</h3>
+          <h3>Selecione a origem e destino</h3>
           <div class="transport-options">
             <button class="car"><i class="fas fa-car"></i></button>
             <button class="bus"><i class="fas fa-bus"></i></button>
@@ -155,11 +155,24 @@
           </div>
           <div class="from-ipt">
             <label for="come-from"><i class="far fa-circle"></i></label>
-            <input type="text" id="come-from" placeholder="Saindo de...">
+            <select id="come-from" style="width: calc(100% - 60px)">
+              <option value="X" hidden>Saindo de...</option>
+              <option value="SAOA-sky">São Paulo</option>
+              <option value="RIOA-sky">Rio de Janeiro</option>
+              <option value="BSBA-sky">Brasília</option>
+              <option value="SSAA-sky">Salvador</option>
+              <option value="FORA-sky">Fortaleza</option>
+              <option value="MAOA-sky">Manaus</option>
+              <option value="CWBA-sky">Curitiba</option>
+              <option value="RECA-sky">Recife</option>
+              <option value="GYNA-sky">Goiânia</option>
+              <option value="BELA-sky">Belém</option>
+              <option value="POAA-sky">Porto Alegre</option>
+            </select>
           </div>
           <div class="going-ipt">
             <label for="going-to"><i class="fas fa-map-marker-alt"></i> </label>
-            <input type="text" id="going-to" placeholder="Indo para...">
+            <input type="text" id="going-to" placeholder="Voo até Belo Horizonte" disabled>
           </div>
         </div>
         <span></span>
@@ -168,17 +181,19 @@
             <i class="far fa-calendar-alt"></i>
             <h3>Selecione sua estadia</h3>
           </div>
-          <label for="stay">Insira a quantidade de dias</label>
-          <input type="number" name="stay" id="stay">
+          <label for="stay">Insira a data de partida</label><br>
+          <input type="text" placeholder="YYYY-MM-DD" minlength="10" maxlength="10" id="dateGo" style="width: 120px"><br>
+          <label for="stay">Insira a data de retorno</label><br>
+          <input type="text" placeholder="YYYY-MM-DD" minlength="10" maxlength="10" id="dateReturn" style="width: 120px">
         </div>
         <span></span>
         <div class="place">
           <div class="title">
             <i class="fas fa-bed"></i>
-            <h3>Selecione sua estadia</h3>
+            <h3>Selecione sua acomodação</h3>
           </div>
           <select name="places-btn" id="places-btn">
-            <option value="">Selecione</option>
+            <option value="X" hidden>Selecione</option>
             <option value="hotel">Hotel</option>
             <option value="farm-hotel">Hotel Fazenda</option>
             <option value="cottage">Chalé</option>
@@ -187,7 +202,16 @@
           </select>
         </div>
       </div>
-      <button class="calc-btn">CALCULAR</button>
+      <div id="calcLoading" class="calc-loading">
+        Carregando...
+      </div>
+      <div class="calc-results">
+        <strong>Custo do voo (ida) para Belo Horizonte</strong>: <span id="calc-results-outbound">R$1500</span><br>
+        <strong>Custo do voo (volta) saindo de Belo Horizonte</strong>: <span id="calc-results-inbound">R$1500</span><br>
+        <strong>Custo estimado da estadia</strong>: <span id="calc-results-accomodation">R$1500</span><br>
+        <strong class="p-top">Custo estimado Total</strong>: <span id="calc-results-total" class="p-top">R$1500</span>
+      </div>
+      <button class="calc-btn" id="submitCalc">CALCULAR</button>
     </section>
 
     <section class="contact">
