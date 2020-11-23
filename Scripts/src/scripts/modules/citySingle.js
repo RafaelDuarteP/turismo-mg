@@ -67,7 +67,7 @@ const injectImages = (imageList, targetElement) => {
         src: image.source,
         alt: image.alt
       })
-    );
+    ).code;
   });
 
   // Injeta os nodes, um a um, no DOM

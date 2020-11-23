@@ -11,19 +11,11 @@ import posthtml from 'rollup-plugin-posthtml-template';
 import include from 'posthtml-include';
 import minifier from 'posthtml-minifier';
 
-import autoprefixer from 'autoprefixer';
+//import autoprefixer from 'autoprefixer';
 
 
 // Definindo opções dos plugins
 const defaultPlugins = [
-  postcss({
-    extensions: ['scss'],
-    minimize: true,
-    exec: true,
-    plugins: [
-      autoprefixer(),
-    ]
-  }),
   resolve({
     jsnext: true,
     main: true,
@@ -64,6 +56,11 @@ const defaultPlugins = [
     ],
     babelrc: false,
   }),
+  postcss({
+    extensions: ['scss'],
+    minimize: true,
+    extract: 'styles.min.css'
+  }),
 
 ];
 
@@ -92,14 +89,14 @@ export default [
     input: 'src/scripts/main.js',
     output: [
       {
-        file: 'build/js/turismomg.dev.js',
+        file: 'build/turismomg.dev.js',
         format: 'iife',
         plugins: [
           getBabelOutputPlugin(babelOutputConfig),
         ],
       },
       {
-        file: 'build/js/turismomg.min.js',
+        file: 'build/turismomg.min.js',
         format: 'iife',
         plugins: [
           getBabelOutputPlugin(babelOutputConfig),

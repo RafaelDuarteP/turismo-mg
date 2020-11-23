@@ -245,6 +245,186 @@
     });
   };
 
+  function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+    try {
+      var info = gen[key](arg);
+      var value = info.value;
+    } catch (error) {
+      reject(error);
+      return;
+    }
+
+    if (info.done) {
+      resolve(value);
+    } else {
+      Promise.resolve(value).then(_next, _throw);
+    }
+  }
+
+  function _asyncToGenerator(fn) {
+    return function () {
+      var self = this,
+          args = arguments;
+      return new Promise(function (resolve, reject) {
+        var gen = fn.apply(self, args);
+
+        function _next(value) {
+          asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+        }
+
+        function _throw(err) {
+          asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+        }
+
+        _next(undefined);
+      });
+    };
+  }
+  /*
+    Módulo responsável pela busca por voos e injeção de conteúdo para a calculadora de gastos
+  */
+
+
+  var calculateExpenses = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator(function* () {
+      /*
+        Função principal que injeta os gastos projetados na calculadora
+      */
+      // Recuperando dados da página
+      var originCityId = document.querySelector('#come-from').value;
+      var departureDate = document.querySelector('#dateGo').value;
+      var returnDate = document.querySelector('#dateReturn').value;
+      var accommodationType = document.querySelector('#places-btn').value;
+      var loadingNode = document.querySelector('#calcLoading');
+      var resultNode = document.querySelector('.calc-results'); // Valida os dados enviados antes de processá-los
+
+      var flightValid = originCityId.includes('-sky') || departureDate.length === 10;
+      var accommodationValid = accommodationType.length > 2;
+
+      if (!flightValid || !accommodationValid) {
+        window.alert('Os dados que você inseriu são inválidos.');
+        return null;
+      } // Limpa a div de resultado e exibe o loading
+
+
+      loadingNode.classList.add('-show');
+      resultNode.classList.remove('-show'); // Chamando callbacks de voos
+
+      var flightOutboundInfo = yield getFlightPrice(originCityId, 'BHZA-sky', departureDate);
+      var flightInboundInfo = yield getFlightPrice('BHZA-sky', originCityId, returnDate); // Validando dados da resposta dos voos
+
+      if (!flightInboundInfo.success || !flightOutboundInfo.success) {
+        window.alert('A busca por um voo retornou um erro.');
+      } // Gera valor estimado para estadia
+
+
+      var accommodationCost = getEstadiaPrice(departureDate, returnDate, accommodationType); // Renderiza os resultados
+
+      showCalcResults(flightInboundInfo.data, flightOutboundInfo.data, accommodationCost);
+      loadingNode.classList.remove('-show');
+      resultNode.classList.add('-show');
+    });
+
+    return function calculateExpenses() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  var getFlightPrice = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator(function* (originCity, destinationCity, date) {
+      /*
+        Função que busca pela API do FlightScanner o preço da viagem
+      */
+      var baseUrl = 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/BR/BRL/pt-BR';
+      var isSuccess, data; // Valida se as informações estão corretas
+
+      if (!originCity.includes('-sky') || !destinationCity.includes('-sky') || date.length !== 10 || destinationCity === originCity) {
+        isSuccess = false;
+      } else {
+        yield fetch("".concat(baseUrl, "/").concat(originCity, "/").concat(destinationCity, "/").concat(date), {
+          method: 'GET',
+          headers: {
+            'x-rapidapi-host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com',
+            'x-rapidapi-key': '360f42a35fmshffac9dd4d1ad0ebp1c2740jsn0efbb3666498'
+          }
+        }).then( /*#__PURE__*/function () {
+          var _ref3 = _asyncToGenerator(function* (response) {
+            isSuccess = true;
+            data = yield response.json();
+            console.log(data);
+          });
+
+          return function (_x4) {
+            return _ref3.apply(this, arguments);
+          };
+        }()).catch(err => {
+          isSuccess = false;
+          console.log(err);
+        });
+      }
+
+      return {
+        success: isSuccess,
+        data: data
+      };
+    });
+
+    return function getFlightPrice(_x, _x2, _x3) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var getEstadiaPrice = (start, end, accomodationType) => {
+    /*
+      Função que retorna o gasto estimado com estadia, com base no período informado e no tipo de acomodação
+    */
+    var startDate = Date.parse(start);
+    var endDate = Date.parse(end);
+    var timeDelta = Math.floor((startDate - endDate) / 1000 / 60 / 60 / 24);
+    var multiplier = 0;
+
+    switch (accomodationType) {
+      case 'hotel':
+        multiplier = 100;
+        break;
+
+      case 'farm-hotel':
+        multiplier = 120;
+        break;
+
+      case 'cottage':
+        multiplier = 120;
+        break;
+
+      case 'hostel':
+        multiplier = 70;
+        break;
+
+      default:
+        multiplier = 0;
+    }
+
+    return multiplier * Math.abs(timeDelta);
+  };
+
+  var showCalcResults = (inboundFlightResponse, outboundFlightResponse, accomodationCost) => {
+    /*
+      Função que injeta na página os resultados da calculadora
+    */
+    console.log(inboundFlightResponse, outboundFlightResponse, accomodationCost);
+    var outboundFlightNode = document.querySelector('#calc-results-outbound');
+    var inboundFlightNode = document.querySelector('#calc-results-inbound');
+    var accomodationNode = document.querySelector('#calc-results-accomodation');
+    var totalNode = document.querySelector('#calc-results-total'); // Verifica se foram encontrados voos
+
+    var outboundValue = outboundFlightResponse.Quotes.length >= 1 ? outboundFlightResponse.Quotes[0].MinPrice : 0;
+    var inboundValue = inboundFlightResponse.Quotes.length >= 1 ? inboundFlightResponse.Quotes[0].MinPrice : 0;
+    outboundFlightNode.textContent = "".concat(outboundValue > 0 ? 'R$ ' + String(outboundValue) : 'Voo não encontrado.');
+    inboundFlightNode.textContent = "".concat(inboundValue > 0 ? 'R$ ' + String(inboundValue) : 'Voo não encontrado.');
+    accomodationNode.textContent = "R$ ".concat(accomodationCost);
+    totalNode.textContent = "R$ ".concat(inboundValue + outboundValue + accomodationCost);
+  };
+
   var searchResultItem = _ => "<a href=\"".concat(_.url, "\" target=\"_self\">").concat(_.city, "</a>");
   /*
     Componente de busca por cidades
@@ -313,9 +493,14 @@
 
 
   var searchInputNode = document.querySelector('.search-text');
+  var calculatorBtn = document.querySelector('#submitCalc');
 
   if (searchInputNode) {
     searchInputNode.addEventListener('keyup', searchBox);
+  }
+
+  if (calculatorBtn) {
+    calculatorBtn.addEventListener('click', calculateExpenses);
   } // Código a ser executado caso seja uma single de cidade
 
 
