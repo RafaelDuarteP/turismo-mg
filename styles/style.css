@@ -1,45 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@200;300;400;700;800&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  width: 100vw;
-  max-width: 100vw;
-  overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 :root {
-  --color-01: #AC0000;
-  --color-02: #BE0A0A;
-  --color-03: #C51414;
-  --color-04: #ac0000c0;
-  --color-1: #333333;
-  --color-2: #4F4F4F;
-  --color-3: #828282;
-  --color-4: #BDBDBD;
-  --color-5: #e0e0e0;
-  --color-6: #f2f2f2;
-  --color-7: #ffffff;
-  --stars: #f2c94c;
+    --color-01: #AC0000;
+    --color-02: #BE0A0A;
+    --color-03: #C51414;
+    --color-04: #ac0000c0;
+    --color-1: #333333;
+    --color-2: #4F4F4F;
+    --color-3: #828282;
+    --color-4: #BDBDBD;
+    --color-5: #e0e0e0;
+    --color-6: #f2f2f2;
+    --color-7: #ffffff;
+    --stars: #f2c94c;
 }
 
 h1 {
-  font-family: "Abril Fatface";
-  font-size: 72px;
-  color: var(--color-01);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 98%;
-
-  letter-spacing: 0.004em;
+    font-family: "Abril Fatface";
+    font-size: 72px;
+    color: var(--color-01);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 98%;
+    letter-spacing: 0.004em;
 }
+
 p {
-  font-size: 20px;
-  line-height: 30px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 h2,
@@ -48,611 +48,618 @@ textarea,
 input,
 p,
 a {
-  font-family: "Nunito";
+    font-family: "Nunito";
 }
 
-@media screen and (max-width: 800px){
-  h1 {
-    font-size: 52px;
-  }
-
-  p{
-    font-size: 16px;
-    line-height: 26px;
-  }
-
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 52px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 26px;
+    }
 }
 
 header {
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  width: 100vw;
-  min-width: 100%;
-  background: var(--color-7);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    min-width: 100%;
+    background: var(--color-7);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  margin: 2px;
+    margin: 2px;
 }
 
 nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  transform: scale(0, 1); /*scale(width, height)como se eu tivesse amassado*/
-  transform-origin: left;
-  transition: transform 400ms ease-in-out;
-  background-color: var(--color-7);
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: scale(0, 1);
+    /*scale(width, height)como se eu tivesse amassado*/
+    transform-origin: left;
+    transition: transform 400ms ease-in-out;
+    background-color: var(--color-7);
 }
 
 .nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .nav-item {
-  margin-bottom: 1em;
-  margin-left: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
 
 .nav-link {
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-  opacity: 0;
-  color: var(--color-01);
-  transition: opacity 150ms ease-in-out;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 0;
+    color: var(--color-01);
+    transition: opacity 150ms ease-in-out;
 }
 
 .nav-link:hover {
-  color: var(--color-03);
+    color: var(--color-03);
 }
 
 .recomendation-btn {
-  background: var(--color-01);
-  color: var(--color-7);
-  padding: 6px;
-  border-radius: 5px;
+    background: var(--color-01);
+    color: var(--color-7);
+    padding: 6px;
+    border-radius: 5px;
 }
 
 .recomendation-btn:hover {
-  opacity: 0.95;
-  color: var(--color-5);
+    opacity: 0.95;
+    color: var(--color-5);
 }
 
-.nav-toggle:checked ~ nav {
-  transform: scale(1, 1);
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav .nav-link {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+.nav-toggle:checked~nav .nav-link {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
 }
 
 .nav-toggle {
-  display: none;
+    display: none;
 }
 
 .nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  display: block;
-  background: var(--color-1);
-  height: 1px;
-  width: 1.5em;
-  border-radius: 1px;
-  position: relative;
-  transition: 250ms ease-out;
+    display: block;
+    background: var(--color-1);
+    height: 1px;
+    width: 1.5em;
+    border-radius: 1px;
+    position: relative;
+    transition: 250ms ease-out;
 }
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content: "";
-  position: absolute;
+    content: "";
+    position: absolute;
 }
 
 .nav-toggle-label span::before {
-  bottom: 6px;
+    bottom: 6px;
 }
 
 .nav-toggle-label span::after {
-  top: 6px;
+    top: 6px;
 }
 
-.nav-toggle:checked ~ .nav-toggle-label span::before {
-  transform: rotate(90deg) translate(6px);
+.nav-toggle:checked~.nav-toggle-label span::before {
+    transform: rotate(90deg) translate(6px);
 }
 
-.nav-toggle:checked ~ .nav-toggle-label span::after {
-  background: transparent;
+.nav-toggle:checked~.nav-toggle-label span::after {
+    background: transparent;
 }
 
-.nav-toggle:checked ~ .nav-toggle-label span {
-  transform: rotate(45deg);
+.nav-toggle:checked~.nav-toggle-label span {
+    transform: rotate(45deg);
 }
 
 .main {
-  max-width: 100vw;
-  padding-bottom: 20px;
+    max-width: 100vw;
+    padding-bottom: 20px;
 }
 
 section {
-  max-width: 100vw;
-  height: 100vh;
-  padding: 0 3%;
+    max-width: 100vw;
+    height: 100vh;
+    padding: 0 3%;
 }
 
 @media screen and (min-width: 950px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 3%;
-  }
-
-  nav {
-    position: unset;
-    text-align: center;
-    height: 100%;
-    transform: scale(1, 1);
-    transition: unset;
-    background: none;
-    align-items: center;
-  }
-
-  .nav-list {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-link {
-    opacity: 1;
-    transition: unset;
-    align-items: center;
-    text-align: center;
-  }
-
-  .nav-item {
-    margin-bottom: 0;
-  }
-
+    .nav-toggle-label {
+        display: none;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 3%;
+    }
+    nav {
+        position: unset;
+        text-align: center;
+        height: 100%;
+        transform: scale(1, 1);
+        transition: unset;
+        background: none;
+        align-items: center;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-link {
+        opacity: 1;
+        transition: unset;
+        align-items: center;
+        text-align: center;
+    }
+    .nav-item {
+        margin-bottom: 0;
+    }
 }
 
 .landing-page {
-  padding-top: 120px;
-  background-color: var(--color-6);
-  background: url('../images/landing-page-2.jpg')
-    no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    padding-top: 120px;
+    background-color: var(--color-6);
+    background: url('../images/landing-page-2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .landing-page h1,
 .landing-page p {
-  max-width: 739px;
-  color: var(--color-7);
-  margin-bottom: 20px;
-  margin: 0 2% 20px 2%;
+    max-width: 739px;
+    color: var(--color-7);
+    margin-bottom: 20px;
+    margin: 0 2% 20px 2%;
 }
 
-.landing-page p{
-  max-width: 602px;
+.landing-page p {
+    max-width: 602px;
 }
-
 
 .blog {
-  height: 100%;
-  padding-top: 30px;
+    height: 100%;
+    padding-top: 30px;
 }
 
 .noticia {
-  position: relative;
-  margin: 5px;
-}
-.title-article {
-  position: absolute;
-  bottom: 15px;
-  left: 10px;
-  text-shadow: -4px 5px 5px rgba(0, 0, 0, 0.3);
-  color: var(--color-7);
+    position: relative;
+    margin: 5px;
 }
 
-.title-article h3{
-  font-size: 24px;
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: -0.015em;
+.title-article {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    text-shadow: -4px 5px 5px rgba(0, 0, 0, 0.3);
+    color: var(--color-7);
+}
+
+.title-article h3 {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: -0.015em;
 }
 
 .img {
-  width: 100%;
-  padding-bottom: 5px;
+    width: 100%;
+    padding-bottom: 5px;
 }
 
 .img img {
-  object-fit: cover;
-  border-radius: 1px;
-  width: 100%;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    border-radius: 1px;
+    width: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .blog-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding-right: 10px;
 }
 
 @media screen and (min-width: 900px) {
-  .landing-page{
-    padding-top: 200px;
-  }
-  .blog-container {
-    display: grid;
-    margin: 2%;
-    max-width: 100vw;
-    height: 100%;
-    grid-template-areas:
-      "a b c d"
-      "e b f d"
-      "e g f h";
-    grid-gap: 5px;
-  }
-
-  #noticia-1 {
-    grid-area: a;
-  }
-
-  #noticia-2 {
-    grid-area: b;
-    min-height: 350px;
-  }
-
-  #noticia-2 .img img {
-    min-height: 350px;
-  }
-
-  #noticia-3 {
-    grid-area: c;
-  }
-
-  #noticia-4 {
-    grid-area: d;
-  }
-
-  #noticia-5 {
-    grid-area: e;
-  }
-
-  #noticia-6 {
-    grid-area: f;
-  }
-
-  #noticia-7 {
-    grid-area: g;
-  }
-
-  #noticia-8 {
-    grid-area: h;
-  }
-
-  .noticia {
-    position: relative;
-  }
-
-  .img {
-    max-width: 314px;
-    height: 100%;
-  }
-
-  .img img {
-    object-fit: cover;
-    border-radius: 5px;
-    max-width: 314px;
-    height: 100%;
-  }
+    .landing-page {
+        padding-top: 200px;
+    }
+    .blog-container {
+        display: grid;
+        margin: 2%;
+        max-width: 100vw;
+        height: 100%;
+        grid-template-areas: "a b c d" "e b f d" "e g f h";
+        grid-gap: 5px;
+    }
+    #noticia-1 {
+        grid-area: a;
+    }
+    #noticia-2 {
+        grid-area: b;
+        min-height: 350px;
+    }
+    #noticia-2 .img img {
+        min-height: 350px;
+    }
+    #noticia-3 {
+        grid-area: c;
+    }
+    #noticia-4 {
+        grid-area: d;
+    }
+    #noticia-5 {
+        grid-area: e;
+    }
+    #noticia-6 {
+        grid-area: f;
+    }
+    #noticia-7 {
+        grid-area: g;
+    }
+    #noticia-8 {
+        grid-area: h;
+    }
+    .noticia {
+        position: relative;
+    }
+    .img {
+        max-width: 314px;
+        height: 100%;
+    }
+    .img img {
+        object-fit: cover;
+        border-radius: 5px;
+        max-width: 314px;
+        height: 100%;
+    }
 }
+
 .contact {
-  display: grid;
-  grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .contact-cover {
-  display: none;
+    display: none;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .form h1 {
-  font-size: 60px;
-  text-align: center;
-  margin: 3%;
+    font-size: 60px;
+    text-align: center;
+    margin: 3%;
 }
 
 .form input {
-  background-color: var(--color-5);
-  border: none;
-  border-radius: 2px;
-  margin: 5px;
-  height: 45px;
-  padding-left: 25px;
+    background-color: var(--color-5);
+    border: none;
+    border-radius: 2px;
+    margin: 5px;
+    height: 45px;
+    padding-left: 25px;
 }
+
 .contact-ipt::placeholder {
-  font-weight: 600;
-  font-size: 15px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 #name-ipt {
-  width: 80%;
+    width: 80%;
 }
 
 #email-ipt {
-  width: 95%;
+    width: 95%;
 }
 
 #message-ipt {
-  height: 150px;
-  padding-bottom: 125px;
+    height: 150px;
+    padding-bottom: 125px;
 }
 
 .form-btn,
 .calc-btn {
-  align-self: flex-end;
-  font-size: 24px;
-  height: 50px;
-  width: 150px;
-  border: none;
-  background-color: var(--color-02);
-  color: var(--color-7);
-  font-family: 'Abril Fatface';
-  border-radius: 3px;
+    align-self: flex-end;
+    font-size: 24px;
+    height: 50px;
+    width: 150px;
+    border: none;
+    background-color: var(--color-02);
+    color: var(--color-7);
+    font-family: 'Abril Fatface';
+    border-radius: 3px;
 }
 
 @media screen and (min-width: 1100px) {
-  .contact {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-gap: 20px;
-    padding: 0 3% 3% 0;
-  }
-
-  .contact-cover {
-    display: block;
-    background: url("../images/landing-page.jpg") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;  }
-
-  .form {
-    margin: 5%;
-  }
-
-  .form input {
-    height: 55px;
-  }
-
-  #message-ipt {
-    height: 180px;
-  }
+    .contact {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-gap: 20px;
+        padding: 0 3% 3% 0;
+    }
+    .contact-cover {
+        display: block;
+        background: url("../images/landing-page.jpg") no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .form {
+        margin: 5%;
+    }
+    .form input {
+        height: 55px;
+    }
+    #message-ipt {
+        height: 180px;
+    }
 }
+
 
 /* CALCULadotra*/
 
 .calculator {
-  height: 100%;
-  padding-bottom: 3%;
-  padding-top: 20px;
-  text-align: center;
+    height: 100%;
+    padding-bottom: 3%;
+    padding-top: 20px;
+    text-align: center;
 }
+
 .calc {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  margin: 35px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 35px 0;
 }
+
 .calc span {
-  background: var(--color-1);
-  height: 1px;
-  width: 200px;
-  display: block;
-  margin: 20px 0;
+    background: var(--color-1);
+    height: 1px;
+    width: 200px;
+    display: block;
+    margin: 20px 0;
 }
+
+
 /*========= ICONS =========*/
+
 .transport-options button,
 .transport label,
 .fa-bed,
-.fa-calendar-alt{
-  background: transparent;
-  border: none;
-  font-size: 30px;
-  color: var(--color-04);
-}
-.transport-options button{
-  padding: 10px 15px;
-}
-.fa-plane {
-  transform: rotate(-90deg);
-}
-.fa-bed, 
 .fa-calendar-alt {
-  margin-right: 10px;
-  font-size: 36px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: var(--color-04);
 }
+
+.transport-options button {
+    padding: 10px 15px;
+}
+
+.fa-plane {
+    transform: rotate(-90deg);
+}
+
+.fa-bed,
+.fa-calendar-alt {
+    margin-right: 10px;
+    font-size: 36px;
+}
+
 .transport label {
-  margin: 4px;
-  font-size: 25px; 
+    margin: 4px;
+    font-size: 25px;
 }
+
 .fa-map-marker-alt {
-  margin: 0 3px;
+    margin: 0 3px;
 }
+
+
 /*========= INPUTS =========*/
+
 .calc input,
 .calc select {
-  background: var(--color-6);
-  border: none;
-  height: 32px;
-  padding: 3px;
-  border-radius: 3px;
-  margin: 3px;
-  font-family: 'Nunito';
-  padding-left: 10px;
+    background: var(--color-6);
+    border: none;
+    height: 32px;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 3px;
+    font-family: 'Nunito';
+    padding-left: 10px;
 }
+
 .transport input {
-  width: 200px;
+    width: 200px;
 }
+
 .dates input {
-  width: 50px;
+    width: 50px;
 }
+
+
 /*========= fonts =========*/
+
 .calc h3 {
-  color: var(--color-2);
+    color: var(--color-2);
 }
+
 .dates label {
-  font-family: 'Nunito';
-  font-weight: 300;
-  font-size: 1rem;
+    font-family: 'Nunito';
+    font-weight: 300;
+    font-size: 1rem;
 }
+
 .title {
-  margin: 5px;
+    margin: 5px;
 }
 
 @media screen and (min-width: 950px) {
-  .calc {
-    flex-direction: row;
-  }
-
-  .calc span {
-    height: 150px;
-    width: 1px;
-    margin: 0 50px;
-  }
+    .calc {
+        flex-direction: row;
+    }
+    .calc span {
+        height: 150px;
+        width: 1px;
+        margin: 0 50px;
+    }
 }
+
 .about-us {
-  background: var(--color-6);
-  height: 100%;
+    background: var(--color-6);
+    height: 100%;
 }
 
 .about-us p {
-  padding-bottom: 25px;
+    padding-bottom: 25px;
 }
+
 .dev-card {
-	background: #ffffff;
-	position: relative;
-	padding-left: 75px;
-	margin-left: 75px;
-	height: 150px;
-	margin-bottom: 25px;
+    background: #ffffff;
+    position: relative;
+    padding-left: 75px;
+    margin-left: 75px;
+    height: 150px;
+    margin-bottom: 25px;
 }
+
 .dev-pic {
-  border-radius: 50%;
-	position: absolute;
-	left: -75px;
+    border-radius: 50%;
+    position: absolute;
+    left: -75px;
 }
+
 .dev-pic img {
-  width: 150px;
-	object-fit: cover;
-  border-radius: 50%;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
 }
+
 .card-dev-txt {
-  text-align: center;
-  padding-top: 5px;
+    text-align: center;
+    padding-top: 5px;
 }
+
 .card-dev-txt h2 {
-  font-family: 'Abril Fatface';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  line-height: 25px;
-  letter-spacing: 0.004em;
-  color: var(--color-1);
+    font-family: 'Abril Fatface';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: 0.004em;
+    color: var(--color-1);
 }
+
 .card-dev-txt h4 {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
 }
+
 .card-dev-txt p {
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;
-  padding: 5px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 5px;
 }
+
 .card-dev-social-media a {
-  text-decoration: none;
-  font-size: 24px;
-  color: var(--color-01);
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--color-01);
 }
+
 .fa-at,
 .fa-linkedin-in {
-  color: var(--color-7);
-  background: var(--color-01);
-  padding: 5px;
-  border-radius: 50%;
+    color: var(--color-7);
+    background: var(--color-01);
+    padding: 5px;
+    border-radius: 50%;
 }
-@media screen and (min-width: 800px){
-	.team-cards{
-		display: flex;
-		justify-content:center;
-		flex-wrap: wrap;
-	}
-	.dev-card {
-	padding-left: 0;
-	padding-top: 80px;
-	margin-left: 20px;
-	margin-top:75px;
-	width: 340px;
-	height: 250px;
-}
-	.dev-pic {
-		left: 95px;
-		top: -75px;
-}
+
+@media screen and (min-width: 800px) {
+    .team-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .dev-card {
+        padding-left: 0;
+        padding-top: 80px;
+        margin-left: 20px;
+        margin-top: 75px;
+        width: 340px;
+        height: 250px;
+    }
+    .dev-pic {
+        left: 95px;
+        top: -75px;
+    }
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5%;
-  align-items: center;
-  background: var(--color-7);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    align-items: center;
+    background: var(--color-7);
 }
 
 footer p {
-  font-size: 15px;
-  color: var(--color-01);
+    font-size: 15px;
+    color: var(--color-01);
 }

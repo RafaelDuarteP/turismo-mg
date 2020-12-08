@@ -2,160 +2,316 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
-  <link rel="stylesheet" href="./styles/style.css" />
-  <link rel="stylesheet" href="./Scripts/build/styles.min.css" />
-  <title>Minas Turismo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./Scripts/build/styles.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title>Minas Turismo</title>
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="./images/icons/logo.svg" alt="MG">
-    </div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label">
+    <header class="header">
+        <div class="logo">
+            <img src="./images/icons/logo.svg" alt="MG">
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label">
       <span></span>
     </label>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link" href="#procurados">Mais Procurados</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#atracoes">Atrações</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#hospedagens">Hospedagens</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#blog">Sobre MG</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#calculadora">Calculadora</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link recomendation-btn" href="#recomende">Recomende um Destino</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="landing-page">
-      <h1 class="landing-title">Venha descobrir Minas Gerais!</h1>
-      <p>
-        Em Minas você vai desfrutar de queijos artesanais, doces fantasticos,
-        bares celebres, cachoeiras de tirar o folego e muito mais!
-      </p>
-      <div class="search-box">
-        <span class="container">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="#procurados">Mais Procurados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#atracoes">Atrações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hospedagens">Hospedagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Sobre MG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#calculadora">Calculadora</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link recomendation-btn" href="#recomende">Recomende um Destino</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="landing-page">
+            <h1 class="landing-title">Venha descobrir Minas Gerais!</h1>
+            <p>
+                Em Minas você vai desfrutar de queijos artesanais, doces fantasticos, bares celebres, cachoeiras de tirar o folego e muito mais!
+            </p>
+            <div class="search-box">
+                <span class="container">
           <input type="text" class="search-text" placeholder="Pesquisar..." id="search" />
           <label for="search">
             <i class="fas fa-search"></i>
           </label>
         </span>
-        <span class="results" id="searchResultBox">
+                <span class="results" id="searchResultBox">
           <span class="result-count">0 resultados encontrados:</span>
-        </span>
-      </div>
-    </section>
+                </span>
+            </div>
+        </section>
 
-    <section class="blog">
-      <h1>Sobre MG</h1>
-      <div class="blog-container">
-
-        <div class="noticia" id="noticia-1">
-          <div class="img">
-            <img src="./images/lago-encantado.png" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>Natureza de Minas</h3>
-          </div>
+        <div class="Mais Procurados">
+            <h1>Mais Procurados</h1>
+            <i class="fas fa-arrow-right"></i>
+            <i class="fas fa-arrow-left"></i>
+            <div class="mp-container">
+                <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-arrow-left"></i>
+                <div class="slider-procurados">
+                    <div class="img-mp" id="mp-belohorizonte">
+                        <img src="./images/bh-igrejapampulha.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-ouropreto">
+                        <img src="./images/op-geral.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-mariana">
+                        <img src="./images/mariana-praça.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-tiradentes">
+                        <img src="./images/tiradentes-matriz.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-carrancas">
+                        <img src="./images/carrancas-cachoeirafumaça.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-diamantina">
+                        <img src="./images/diamantina-catedral.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-brumadinho">
+                        <img src="./images/brumadinho-inhotim.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-monteverde">
+                        <img src="./images/mv-rua.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-cordisburgo">
+                        <img src="./images/cordisburgo-grutamaquine.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-mp" id="mp-poçosdecaldas">
+                        <img src="./images/pdc-relogiofloral.jpg" width="95%" height="250px">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="noticia" id="noticia-2">
-          <div class="img">
-            <img src="./images/pao-de-queijo.png" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>Entre serras e queijos</h3>
-          </div>
+        <div class="Atrações">
+            <h1>Atrações</h1>
+            <div class="atracoes-container">
+                <div class="slider-atracoes">
+                    <div class="img-atracoes" id="a-bh1">
+                        <img src="./images/bh-mercadocentral.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-bh2">
+                        <img src="./images/bh-mineirao.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-bh3">
+                        <img src="./images/bh-pcaliberdade.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-bh4">
+                        <img src="./images/bh-pcapapa.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-op1">
+                        <img src="./images/op-saofrancisco.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-mn1">
+                        <img src="./images/mariana-igreja.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-mn2">
+                        <img src="./images/mariana-praça.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-tr1">
+                        <img src="./images/tiradentes-chafariz.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-tr2">
+                        <img src="./images/tiradentes-igrejansarosario.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-tr3">
+                        <img src="./images/tiradentes-trem.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-tr4">
+                        <img src="./images/tiradentes-matriz.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-ca1">
+                        <img src="./images/carrancas-cachoeiraesmeralda.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-ca2">
+                        <img src="./images/carrancas-cachoeirafumaça.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-ca3">
+                        <img src="./images/carrancas-cachoeirasalomao.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-ca4">
+                        <img src="./images/carrancas-poço.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-dm1">
+                        <img src="./images/diamantina-casajk.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-dm2">
+                        <img src="./images/diamantina-catedral.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-dm3">
+                        <img src="./images/diamantina-chicadasilva.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-dm4">
+                        <img src="./images/diamantina-igrejadocarmo.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-dm5">
+                        <img src="./images/diamantina-mercadovelho.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-bm1">
+                        <img src="./images/brumadinho-cachoeiraostra.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-bm2">
+                        <img src="./images/brumadinho-igrejapiedade.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-bm3">
+                        <img src="./images/brumadinho-inhotim.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-bm4">
+                        <img src="./images/brumadinho-serracalçada.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-mv1">
+                        <img src="./images/mv-igrejasaofrancisco.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-mv2">
+                        <img src="./images/mv-pedraredonda.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-mv3">
+                        <img src="./images/mv-shoppingceleiro.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-cd1">
+                        <img src="./images/cordisburgo-igrejamatriz.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-cd2">
+                        <img src="./images/cordisburgo-museuguimaraesrosa.png" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-cd3">
+                        <img src="./images/cordisburgo-capelasaojose.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-cd4">
+                        <img src="./images/cordisburgo-grutamaquine.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-pc1">
+                        <img src="./images/pdc-cristo.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-pc2">
+                        <img src="./images/pdc-fonteamores.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-pc3">
+                        <img src="./images/pdc-relogiofloral.jpg" width="95%" height="250px">
+                    </div>
+                    <div class="img-atracoes" id="a-pc4">
+                        <img src="./images/pdc-veudasnoivas.jpg" width="95%" height="250px">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="noticia" id="noticia-3">
-          <div class="img">
-            <img src="./images/montanha.png" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>Montanhas e Trilhas</h3>
-          </div>
-        </div>
+        <section class="blog">
+            <h1>Sobre MG</h1>
+            <div class="blog-container">
 
-        <div class="noticia" id="noticia-4">
-          <div class="img">
-            <img src="./images/sao-joao-del-rey.png" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>Cidades Charmosas</h3>
-          </div>
-        </div>
+                <div class="noticia" id="noticia-1">
+                    <div class="img">
+                        <img src="./images/lago-encantado.png" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>Natureza de Minas</h3>
+                    </div>
+                </div>
 
-        <div class="noticia" id="noticia-5">
-          <div class="img">
-            <img src="./images/comida-mineira.png" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>Natureza Mineira</h3>
-          </div>
-        </div>
+                <div class="noticia" id="noticia-2">
+                    <div class="img">
+                        <img src="./images/pao-de-queijo.png" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>Entre serras e queijos</h3>
+                    </div>
+                </div>
 
-        <div class="noticia" id="noticia-6">
-          <div class="img">
-            <img src="./images/tiradentes.png" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>A noite em Minas Gerais</h3>
-          </div>
-        </div>
+                <div class="noticia" id="noticia-3">
+                    <div class="img">
+                        <img src="./images/montanha.png" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>Montanhas e Trilhas</h3>
+                    </div>
+                </div>
 
-        <div class="noticia" id="noticia-7">
-          <div class="img">
-            <img src="./images/paraquedas.png" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>Aventuras em MG</h3>
-          </div>
-        </div>
+                <div class="noticia" id="noticia-4">
+                    <div class="img">
+                        <img src="./images/sao-joao-del-rey.png" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>Cidades Charmosas</h3>
+                    </div>
+                </div>
 
-        <div class="noticia" id="noticia-8">
-          <div class="img">
-            <img src="./images/capitolio.jpg" alt="" srcset="">
-          </div>
-          <div class="title-article">
-            <h3>Praia Mineira</h3>
-          </div>
-        </div>
-      </div>
-      </div>
+                <div class="noticia" id="noticia-5">
+                    <div class="img">
+                        <img src="./images/comida-mineira.png" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>Natureza Mineira</h3>
+                    </div>
+                </div>
 
-    </section>
+                <div class="noticia" id="noticia-6">
+                    <div class="img">
+                        <img src="./images/tiradentes.png" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>A noite em Minas Gerais</h3>
+                    </div>
+                </div>
 
-    <section class="calculator">
-      <h1>Calculadora de Gastos</h1>
-      <div class="calc">
-        <div class="transport">
-          <h3>Selecione a origem e destino</h3>
-          <div class="transport-options">
-            <button class="car"><i class="fas fa-car"></i></button>
-            <button class="bus"><i class="fas fa-bus"></i></button>
-            <button class="airplane"><i class="fas fa-plane"></i></button>
-            <button class="train"><i class="fas fa-train"></i></button>
-          </div>
-          <div class="from-ipt">
-            <label for="come-from"><i class="far fa-circle"></i></label>
-            <select id="come-from" style="width: calc(100% - 60px)">
+                <div class="noticia" id="noticia-7">
+                    <div class="img">
+                        <img src="./images/paraquedas.png" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>Aventuras em MG</h3>
+                    </div>
+                </div>
+
+                <div class="noticia" id="noticia-8">
+                    <div class="img">
+                        <img src="./images/capitolio.jpg" alt="" srcset="">
+                    </div>
+                    <div class="title-article">
+                        <h3>Praia Mineira</h3>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <section class="calculator">
+            <h1>Calculadora de Gastos</h1>
+            <div class="calc">
+                <div class="transport">
+                    <h3>Selecione a origem e destino</h3>
+                    <div class="transport-options">
+                        <button class="car"><i class="fas fa-car"></i></button>
+                        <button class="bus"><i class="fas fa-bus"></i></button>
+                        <button class="airplane"><i class="fas fa-plane"></i></button>
+                        <button class="train"><i class="fas fa-train"></i></button>
+                    </div>
+                    <div class="from-ipt">
+                        <label for="come-from"><i class="far fa-circle"></i></label>
+                        <select id="come-from" style="width: calc(100% - 60px)">
               <option value="X" hidden>Saindo de...</option>
               <option value="SAOA-sky">São Paulo</option>
               <option value="RIOA-sky">Rio de Janeiro</option>
@@ -169,30 +325,30 @@
               <option value="BELA-sky">Belém</option>
               <option value="POAA-sky">Porto Alegre</option>
             </select>
-          </div>
-          <div class="going-ipt">
-            <label for="going-to"><i class="fas fa-map-marker-alt"></i> </label>
-            <input type="text" id="going-to" placeholder="Voo até Belo Horizonte" disabled>
-          </div>
-        </div>
-        <span></span>
-        <div class="dates">
-          <div class="title">
-            <i class="far fa-calendar-alt"></i>
-            <h3>Selecione sua estadia</h3>
-          </div>
-          <label for="stay">Insira a data de partida</label><br>
-          <input type="text" placeholder="YYYY-MM-DD" minlength="10" maxlength="10" id="dateGo" style="width: 120px"><br>
-          <label for="stay">Insira a data de retorno</label><br>
-          <input type="text" placeholder="YYYY-MM-DD" minlength="10" maxlength="10" id="dateReturn" style="width: 120px">
-        </div>
-        <span></span>
-        <div class="place">
-          <div class="title">
-            <i class="fas fa-bed"></i>
-            <h3>Selecione sua acomodação</h3>
-          </div>
-          <select name="places-btn" id="places-btn">
+                    </div>
+                    <div class="going-ipt">
+                        <label for="going-to"><i class="fas fa-map-marker-alt"></i> </label>
+                        <input type="text" id="going-to" placeholder="Voo até Belo Horizonte" disabled>
+                    </div>
+                </div>
+                <span></span>
+                <div class="dates">
+                    <div class="title">
+                        <i class="far fa-calendar-alt"></i>
+                        <h3>Selecione sua estadia</h3>
+                    </div>
+                    <label for="stay">Insira a data de partida</label><br>
+                    <input type="text" placeholder="YYYY-MM-DD" minlength="10" maxlength="10" id="dateGo" style="width: 120px"><br>
+                    <label for="stay">Insira a data de retorno</label><br>
+                    <input type="text" placeholder="YYYY-MM-DD" minlength="10" maxlength="10" id="dateReturn" style="width: 120px">
+                </div>
+                <span></span>
+                <div class="place">
+                    <div class="title">
+                        <i class="fas fa-bed"></i>
+                        <h3>Selecione sua acomodação</h3>
+                    </div>
+                    <select name="places-btn" id="places-btn">
             <option value="X" hidden>Selecione</option>
             <option value="hotel">Hotel</option>
             <option value="farm-hotel">Hotel Fazenda</option>
@@ -200,174 +356,213 @@
             <option value="hostel">Hostel</option>
             <option value="none">Nenhum desses</option>
           </select>
-        </div>
-      </div>
-      <div id="calcLoading" class="calc-loading">
-        Carregando...
-      </div>
-      <div class="calc-results">
-        <strong>Custo do voo (ida) para Belo Horizonte</strong>: <span id="calc-results-outbound">R$1500</span><br>
-        <strong>Custo do voo (volta) saindo de Belo Horizonte</strong>: <span id="calc-results-inbound">R$1500</span><br>
-        <strong>Custo estimado da estadia</strong>: <span id="calc-results-accomodation">R$1500</span><br>
-        <strong class="p-top">Custo estimado Total</strong>: <span id="calc-results-total" class="p-top">R$1500</span>
-      </div>
-      <button class="calc-btn" id="submitCalc">CALCULAR</button>
-    </section>
-
-    <section class="contact">
-      <div class="contact-cover">
-      </div>
-      <div class="form">
-        <h1>Envie sua recomendação</h1>
-        <input type="text" name="name" id="name-ipt" class="contact-ipt" placeholder="Seu nome completo">
-        <input type="email" name="email" id="email-ipt" class="contact-ipt" placeholder="Seu e-mail">
-        <input type="text" name="subject" id="subject-ipt" class="contact-ipt" placeholder="Assunto">
-        <input type="text" name="message" id="message-ipt" class="contact-ipt" placeholder="Digite aqui...">
-        <button class="form-btn">ENVIAR</button>
-      </div>
-    </section>
-
-    <section class="about-us">
-      <h1>Sobre Nós</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.</p>
-      <div class="team-cards">
-        <div class="dev-card">
-          <div class="dev-pic">
-            <img
-              src="images/anaclara.jpeg"
-              alt="ana clara">
-          </div>
-
-          <div class="card-dev-txt">
-            <h2>Ana Clara Fonseca</h2>
-            <h4>Front-end Developer</h4>
-            <div class="card-dev-social-media">
-              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> </a>
-              <a href="mailto:claracamposbh@hotmail.com">
-                <i class="fas fa-at"></i>
-              </a>
+                </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-        </div>
-        <div class="dev-card">
-          <div class="dev-pic">
-            <img
-              src="images/thales.jpg"
-              alt="thales">
-          </div>
-
-          <div class="card-dev-txt">
-            <h2>Thales Alves</h2>
-            <h4>Função</h4>
-            <div class="card-dev-social-media">
-              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> </a>
-              <a href="mailto:claracamposbh@hotmail.com">
-                <i class="fas fa-at"></i>
-              </a>
+            <div id="calcLoading" class="calc-loading">
+                Carregando...
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-        </div>
-        <div class="dev-card">
-          <div class="dev-pic">
-            <img
-              src="images/rafael.jpg"
-              alt="Rafael">
-          </div>
-
-          <div class="card-dev-txt">
-            <h2>Rafael Duarte</h2>
-            <h4>Front-end Developer</h4>
-            <div class="card-dev-social-media">
-              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> </a>
-              <a href="mailto:claracamposbh@hotmail.com">
-                <i class="fas fa-at"></i>
-              </a>
+            <div class="calc-results">
+                <strong>Custo do voo (ida) para Belo Horizonte</strong>: <span id="calc-results-outbound">R$1500</span><br>
+                <strong>Custo do voo (volta) saindo de Belo Horizonte</strong>: <span id="calc-results-inbound">R$1500</span><br>
+                <strong>Custo estimado da estadia</strong>: <span id="calc-results-accomodation">R$1500</span><br>
+                <strong class="p-top">Custo estimado Total</strong>: <span id="calc-results-total" class="p-top">R$1500</span>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-        </div>
-        <div class="dev-card">
-          <div class="dev-pic">
-            <img
-              src="images/gustavo.jpg"
-              alt="gustavo">
-          </div>
+            <button class="calc-btn" id="submitCalc">CALCULAR</button>
+        </section>
 
-          <div class="card-dev-txt">
-            <h2>Gustavo Canabrava</h2>
-            <h4>Front-end Developer</h4>
-            <div class="card-dev-social-media">
-              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> </a>
-              <a href="mailto:claracamposbh@hotmail.com">
-                <i class="fas fa-at"></i>
-              </a>
+        <section class="contact">
+            <div class="contact-cover">
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
-        </div>
-        <div class="dev-card">
-          <div class="dev-pic">
-            <img
-              src="./images/nathan.jpg"
-              alt="nathan">
-          </div>
+            <div class="form">
+                <h1>Envie sua recomendação</h1>
+                <input type="text" name="name" id="name-ipt" class="contact-ipt" placeholder="Seu nome completo">
+                <input type="email" name="email" id="email-ipt" class="contact-ipt" placeholder="Seu e-mail">
+                <input type="text" name="subject" id="subject-ipt" class="contact-ipt" placeholder="Assunto">
+                <input type="text" name="message" id="message-ipt" class="contact-ipt" placeholder="Digite aqui...">
+                <button class="form-btn">ENVIAR</button>
+            </div>
+        </section>
 
-          <div class="card-dev-txt">
-            <h2>Nathan Gonçalves</h2>
-            <h4>Função</h4>
-            <div class="card-dev-social-media">
-              <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> </a>
-              <a href="mailto:claracamposbh@hotmail.com">
-                <i class="fas fa-at"></i>
-              </a>
+        <section class="about-us">
+            <h1>Sobre Nós</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="team-cards">
+                <div class="dev-card">
+                    <div class="dev-pic">
+                        <img src="images/anaclara.jpeg" alt="ana clara">
+                    </div>
+
+                    <div class="card-dev-txt">
+                        <h2>Ana Clara Fonseca</h2>
+                        <h4>Front-end Developer</h4>
+                        <div class="card-dev-social-media">
+                            <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> </a>
+                            <a href="mailto:claracamposbh@hotmail.com">
+                                <i class="fas fa-at"></i>
+                            </a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-pic">
+                        <img src="images/thales.jpg" alt="thales">
+                    </div>
+
+                    <div class="card-dev-txt">
+                        <h2>Thalles Alves</h2>
+                        <h4>Função</h4>
+                        <div class="card-dev-social-media">
+                            <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> </a>
+                            <a href="mailto:claracamposbh@hotmail.com">
+                                <i class="fas fa-at"></i>
+                            </a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-pic">
+                        <img src="images/rafael.jpg" alt="Rafael">
+                    </div>
+
+                    <div class="card-dev-txt">
+                        <h2>Rafael Duarte</h2>
+                        <h4>Front-end Developer</h4>
+                        <div class="card-dev-social-media">
+                            <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> </a>
+                            <a href="mailto:claracamposbh@hotmail.com">
+                                <i class="fas fa-at"></i>
+                            </a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-pic">
+                        <img src="images/gustavo.jpg" alt="gustavo">
+                    </div>
+
+                    <div class="card-dev-txt">
+                        <h2>Gustavo Canabrava</h2>
+                        <h4>Front-end Developer</h4>
+                        <div class="card-dev-social-media">
+                            <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> </a>
+                            <a href="mailto:claracamposbh@hotmail.com">
+                                <i class="fas fa-at"></i>
+                            </a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-pic">
+                        <img src="./images/nathan.jpg" alt="nathan">
+                    </div>
+
+                    <div class="card-dev-txt">
+                        <h2>Nathan Gonçalves</h2>
+                        <h4>Função</h4>
+                        <div class="card-dev-social-media">
+                            <a href="https://br.linkedin.com/in/ana-clara-fonseca-campos-48ab5319b" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/clarafonseca" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> </a>
+                            <a href="mailto:claracamposbh@hotmail.com">
+                                <i class="fas fa-at"></i>
+                            </a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    </div>
+                </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-          </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Trabalho Interdisciplinar - Engenharia de Software - 1º período - PUC MINAS
+        </p>
+        <div class="logo-footer">
+            <img src="./images/icons/logo.svg" alt="Logo">
         </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>
-      Trabalho Interdisciplinar - Engenharia de Software - 1º período - PUC
-      MINAS
-    </p>
-    <div class="logo-footer">
-      <img src="./images/icons/logo.svg" alt="Logo">
-    </div>
-  </footer>
-  <script src="https://kit.fontawesome.com/c634ace556.js" crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-search-pseudo-elements></script>
-  <script src="Scripts/build/turismomg.min.js"></script>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        document.getElementById
+
+        $(document).ready(function() {
+            $('.slider-procurados').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                acessibility: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 768,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+        $(document).ready(function() {
+            $('.slider-atracoes').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 768,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/c634ace556.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-search-pseudo-elements></script>
+    <script src="Scripts/build/turismomg.min.js"></script>
 </body>
 
 </html>
