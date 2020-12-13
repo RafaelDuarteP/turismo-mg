@@ -15,7 +15,7 @@ body {
   --color-01: #AC0000;
   --color-02: #BE0A0A;
   --color-03: #C51414;
-  --color-04: #ac0000c0;
+  --color-04: #8f0000;
   --color-1: #333333;
   --color-2: #4F4F4F;
   --color-3: #828282;
@@ -118,16 +118,17 @@ nav {
   color: var(--color-03);
 }
 
-.recomendation-btn {
+.form-call-btn {
   background: var(--color-01);
   color: var(--color-7);
   padding: 6px;
   border-radius: 5px;
 }
 
-.recomendation-btn:hover {
+.form-call-btn:hover {
   opacity: 0.95;
   background-color: var(--color-04);
+  color: white;
 }
 
 .nav-toggle:checked ~ nav {
@@ -409,6 +410,10 @@ section {
   text-align: center;
   margin: 3%;
 }
+.form p{
+  text-align: center;
+  font-size: 16px;
+}
 
 .form input {
   background-color: var(--color-5);
@@ -427,12 +432,14 @@ section {
   width: 80%;
 }
 
-#email_ipt {
+#email_ipt,
+#subject_ipt,
+#message_ipt {
   width: 95%;
 }
 
 #message_ipt {
-  height: 150px;
+  height: 130px;
   padding-bottom: 125px;
 }
 
@@ -572,6 +579,7 @@ section {
   }
 }
 .about-us {
+  padding-top:40px;
   height: 100%;
 }
 

@@ -24,22 +24,14 @@
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link" href="#procurados">Mais Procurados</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">Sobre MG </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#atracoes">Atrações</a>
+          <a class="nav-link" href="#form">Recomende um Destino</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#hospedagens">Hospedagens</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#blog">Sobre MG</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#calculadora">Calculadora</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link recomendation-btn" href="#recomende">Recomende um Destino</a>
+          <a class="nav-link form-call-btn" href="#calculadora">Calcule o valor da sua viagem</a>
         </li>
       </ul>
     </nav>
@@ -64,7 +56,7 @@
       </div>
     </section>
 
-    <section class="blog">
+    <section class="blog" id="blog">
       <h1>Sobre MG</h1>
       <div class="blog-container">
 
@@ -144,7 +136,7 @@
 
     </section>
 
-    <section class="calculator">
+    <section class="calculator" id="calculadora">
       <h1>Calculadora de Gastos</h1>
       <div class="calc">
         <div class="transport">
@@ -195,13 +187,17 @@
     <section class="contact">
       <div class="contact-cover">
       </div>
-      <form action="/" method="post" id="form" class="form"> 
-        <input class="contact-ipt" type="text" name="name" id="name_ipt" placeholder="Seu nome completo" required>
-        <input class="contact-ipt" type="email" name="email" id="email_ipt" placeholder="Seu E-mail" required>
-        <input class="contact-ipt" type="text" name="subject" id="subject_ipt" placeholder="Assunto" required>
-        <input class="contact-ipt" type="text" name="message" id="message_ipt" placeholder="Digite aqui..." required>
-        <button class="form-btn" type="submit" id="btn_email" onclick="run">Enviar</button>
-    </form>
+      <div class="form">
+        <h1>Recomende um destino</h1>
+        <p>Preencha o formulario para nos enviar uma recomendação por e-mail!!</p>
+        <form action="/" method="post" id="form"> 
+          <input class="contact-ipt" type="text" name="name" id="name_ipt" placeholder="Seu nome completo" required>
+          <input class="contact-ipt" type="email" name="email" id="email_ipt" placeholder="Seu E-mail" required>
+          <input class="contact-ipt" type="text" name="subject" id="subject_ipt" placeholder="Assunto" required>
+          <input class="contact-ipt" type="text" name="message" id="message_ipt" placeholder="Digite aqui..." required>
+          <button class="form-btn" type="submit" id="btn_email" onclick="run">Enviar</button>
+      </form>
+      </div>
     </section>
 
     <section class="about-us">
