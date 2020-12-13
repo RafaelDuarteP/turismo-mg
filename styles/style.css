@@ -63,6 +63,9 @@ a {
 
 }
 
+/*==================
+        HEADER
+  ==================*/
 header {
   text-align: center;
   position: fixed;
@@ -73,8 +76,9 @@ header {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+
 .logo {
-  margin: 2px;
+  padding: 2px;
 }
 
 nav {
@@ -123,7 +127,7 @@ nav {
 
 .recomendation-btn:hover {
   opacity: 0.95;
-  color: var(--color-5);
+  background-color: var(--color-04);
 }
 
 .nav-toggle:checked ~ nav {
@@ -186,6 +190,10 @@ nav {
 .nav-toggle:checked ~ .nav-toggle-label span {
   transform: rotate(45deg);
 }
+
+/*==================
+      LANDING PAGE
+  ==================*/
 
 .main {
   max-width: 100vw;
@@ -263,6 +271,9 @@ section {
   max-width: 602px;
 }
 
+/*==================
+        BLOG
+  ==================*/
 
 .blog {
   height: 100%;
@@ -297,6 +308,7 @@ section {
   object-fit: cover;
   border-radius: 1px;
   width: 100%;
+  height: 300px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -308,10 +320,11 @@ section {
   padding-right: 10px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .landing-page{
     padding-top: 200px;
   }
+
   .blog-container {
     display: grid;
     margin: 2%;
@@ -410,15 +423,15 @@ section {
   font-size: 15px;
 }
 
-#name-ipt {
+#name_ipt {
   width: 80%;
 }
 
-#email-ipt {
+#email_ipt {
   width: 95%;
 }
 
-#message-ipt {
+#message_ipt {
   height: 150px;
   padding-bottom: 125px;
 }
@@ -460,7 +473,7 @@ section {
     height: 55px;
   }
 
-  #message-ipt {
+  #message_ipt {
     height: 180px;
   }
 }
@@ -559,7 +572,6 @@ section {
   }
 }
 .about-us {
-  background: var(--color-6);
   height: 100%;
 }
 
@@ -567,7 +579,7 @@ section {
   padding-bottom: 25px;
 }
 .dev-card {
-	background: #ffffff;
+	background: var(--color-6);
 	position: relative;
 	padding-left: 75px;
 	margin-left: 75px;
