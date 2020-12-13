@@ -1,0 +1,60 @@
+/**
+ * components/_slider.scss
+ */
+
+.img-atracoes, .img-mp {
+  img {
+    border-radius: 8px;
+  }
+}
+
+.slider {
+
+  &-section {
+    margin: 80px 0;
+
+    h1 {
+      padding: 0 5%;
+      margin: 60px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      margin: 60px 0 200px;
+    }
+  }
+
+  &-container {
+    position: relative;
+
+    .slick-slider {
+      padding: 0 5%;
+    }
+  }
+
+  &-arrows {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    button {
+      height: auto;
+      width: 32px;
+      margin: 0 20px;
+      background-color: transparent;
+      color: var(--color-01);
+      border: none;
+      cursor: pointer;
+
+      svg {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
+}
