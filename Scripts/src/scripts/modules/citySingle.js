@@ -17,12 +17,12 @@ const citySingle = () => {
     // Recupera Nodes
     const cityNameNode = document.querySelector('#cityName');
     const cityDetailsNode = document.querySelector('#cityDetails');
-    const cityInfoNode = document.querySelector('#cityInfo');
+    const cityInfoNode = document.querySelector('.slider-city');
     const heroNode = document.querySelector('.landing-page');
 
-    // Injeta nome e detalhes da cidade - Caso não existam no payload da cidade, injeta 'atributo vazio'
-    cityNameNode.textContent = cityPayload.cidade || 'atributo vazio';
-    cityDetailsNode.textContent = cityPayload.details || 'atributo vazio';
+    // Injeta nome e detalhes da cidade - Caso não existam no payload da cidade, injeta 'Conheça mais'
+    cityNameNode.textContent = cityPayload.cidade || 'Conheça mais';
+    cityDetailsNode.textContent = cityPayload.details || 'Conheça mais';
 
     // Recupera array de imagens da cidade
     const imageList = cityPayload.images;
@@ -73,6 +73,38 @@ const injectImages = (imageList, targetElement) => {
   // Injeta os nodes, um a um, no DOM
   imageNodes.forEach((node) => {
     targetElement.insertAdjacentHTML('afterbegin', node);
+  });
+
+  initCitySlider();
+};
+
+
+const initCitySlider = () => {
+  $('.slider-city').slick({
+    centerMode: false,
+    centerPadding: '60px',
+    slidesToShow: 1,
+    acessibility: true,
+    autoplay: true,
+    autoplaySpeed: 11000,
+    adaptiveHeight: true,
+    prevArrow: $('.slider-arrows.-ct>.slider-previous'),
+    nextArrow: $('.slider-arrows.-ct>.slider-next'),
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        centerMode: false,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        centerMode: false,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }]
   });
 };
 

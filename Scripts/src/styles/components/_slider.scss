@@ -29,6 +29,20 @@
     .slick-slider {
       padding: 0 5%;
     }
+
+    .img-ct {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      img {
+        max-height: 600px;
+        margin: auto;
+      }
+    }
+
+    &.city-images {
+      max-height: 600px;
+    }
   }
 
   &-arrows {

@@ -13,9 +13,6 @@
       source: "https://www.pracadopapa.com.br/wp-content/uploads/2018/06/praca-do-papa-11851976838886621.jpg",
       alt: "Praça do Papa"
     }, {
-      source: "https://lh3.googleusercontent.com/proxy/Pqy7sPM5cep_4ufgVoAcHtae8w1GGiLP8AEXubdA8rCPRdnWY49B2GAXc5hz-KXiBFwgX8W2X1mBP5vL83V3ZNRWcxsGEszwTGBbYJyyyvaW5BPHn3hqUWQqBDA2z7yiP5iQxTrgz1fTyQpaf8U3CgPPhM2R6M7o1g",
-      alt: "Praça da Liberdade"
-    }, {
       source: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQieThKW2SyVqomSrKyBEL6DFfZ6FAQinTGgg&usqp=CAU",
       alt: "Mercado Central"
     }]
@@ -183,7 +180,7 @@
     }]
   }];
 
-  var cityImage = _ => "<img src=\"".concat(_.src, "\" alt=\"").concat(_.alt, "\">");
+  var cityImage = _ => "<div class=\"img-ct\">\n    <img src=\"".concat(_.src, "\" alt=\"").concat(_.alt, "\">\n</div>");
   /*
     Módulo responsável pela injeção de conteúdo nas páginas de cidades
   */
@@ -199,11 +196,11 @@
       // Recupera Nodes
       var cityNameNode = document.querySelector('#cityName');
       var cityDetailsNode = document.querySelector('#cityDetails');
-      var cityInfoNode = document.querySelector('#cityInfo');
-      var heroNode = document.querySelector('.landing-page'); // Injeta nome e detalhes da cidade - Caso não existam no payload da cidade, injeta 'atributo vazio'
+      var cityInfoNode = document.querySelector('.slider-city');
+      var heroNode = document.querySelector('.landing-page'); // Injeta nome e detalhes da cidade - Caso não existam no payload da cidade, injeta 'Conheça mais'
 
-      cityNameNode.textContent = cityPayload.cidade || 'atributo vazio';
-      cityDetailsNode.textContent = cityPayload.details || 'atributo vazio'; // Recupera array de imagens da cidade
+      cityNameNode.textContent = cityPayload.cidade || 'Conheça mais';
+      cityDetailsNode.textContent = cityPayload.details || 'Conheça mais'; // Recupera array de imagens da cidade
 
       var imageList = cityPayload.images; // Usa primeira imagem da cidade como imagem de fundo
 
@@ -242,6 +239,36 @@
 
     imageNodes.forEach(node => {
       targetElement.insertAdjacentHTML('afterbegin', node);
+    });
+    initCitySlider();
+  };
+
+  var initCitySlider = () => {
+    $('.slider-city').slick({
+      centerMode: false,
+      centerPadding: '60px',
+      slidesToShow: 1,
+      acessibility: true,
+      autoplay: true,
+      autoplaySpeed: 11000,
+      adaptiveHeight: true,
+      prevArrow: $('.slider-arrows.-ct>.slider-previous'),
+      nextArrow: $('.slider-arrows.-ct>.slider-next'),
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }, {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }]
     });
   };
 
@@ -351,7 +378,6 @@
           var _ref3 = _asyncToGenerator(function* (response) {
             isSuccess = true;
             data = yield response.json();
-            console.log(data);
           });
 
           return function (_x4) {
@@ -411,7 +437,6 @@
     /*
       Função que injeta na página os resultados da calculadora
     */
-    console.log(inboundFlightResponse, outboundFlightResponse, accomodationCost);
     var outboundFlightNode = document.querySelector('#calc-results-outbound');
     var inboundFlightNode = document.querySelector('#calc-results-inbound');
     var accomodationNode = document.querySelector('#calc-results-accomodation');
