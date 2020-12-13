@@ -197,6 +197,29 @@ section {
     padding: 0 3%;
 }
 
+section.city-info {
+    max-height: 800px;
+}
+
+.city-images.slider-container {
+    margin: 100px 0;
+}
+
+#cityName {
+    background: var(--color-01);
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+#cityDetails {
+    background: var(--color-01);
+    border-radius: 8px;
+    max-width: 739px;
+    margin-top: -12px;
+    padding: 20px 8px 8px;
+}
+
 @media screen and (min-width: 950px) {
     .nav-toggle-label {
         display: none;
