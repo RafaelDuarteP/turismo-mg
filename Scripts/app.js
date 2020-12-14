@@ -11,7 +11,7 @@ $(document).ready(function(){
             url: "/",
             type: 'POST',
             data: body
-          }).error(function(error) {
+          }).fail(function(error) {
             window.alert("Algo deu errado, favor conferir se todos os campos foram preenchidos corretamente.");
           }).then( function (success){
             window.alert(success)

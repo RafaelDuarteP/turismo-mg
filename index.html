@@ -380,11 +380,13 @@
             </div>
             <div class="form">
                 <h1>Envie sua recomendação</h1>
-                <input type="text" name="name" id="name-ipt" class="contact-ipt" placeholder="Seu nome completo">
-                <input type="email" name="email" id="email-ipt" class="contact-ipt" placeholder="Seu e-mail">
-                <input type="text" name="subject" id="subject-ipt" class="contact-ipt" placeholder="Assunto">
-                <input type="text" name="message" id="message-ipt" class="contact-ipt" placeholder="Digite aqui...">
-                <button class="form-btn">ENVIAR</button>
+                <form action="/" method="post" id="form">
+                    <input class="contact-ipt" type="text" name="name" id="name_ipt" placeholder="Seu nome completo" required>
+                    <input class="contact-ipt" type="email" name="email" id="email_ipt" placeholder="Seu E-mail" required>
+                    <input class="contact-ipt" type="text" name="subject" id="subject_ipt" placeholder="Assunto" required>
+                    <input class="contact-ipt" type="text" name="message" id="message_ipt" placeholder="Digite aqui..." required>
+                    <button class="form-btn" type="submit" id="btn_email" onclick="run">Enviar</button>
+                </form>
             </div>
         </section>
 
@@ -573,6 +575,7 @@
     <script src="https://kit.fontawesome.com/c634ace556.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-search-pseudo-elements></script>
     <script src="Scripts/build/turismomg.min.js"></script>
+    <script src="Scripts/app.js"></script>
 </body>
 
 </html>
