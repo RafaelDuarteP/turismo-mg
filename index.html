@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-  <script src="./Scripts/app.js"></script>
-  <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
-  <link rel="stylesheet" href="./styles/style.css" />
-  <link rel="stylesheet" href="./Scripts/build/styles.min.css" />
-  <title>Minas Turismo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="images/icons/favicon.svg">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./Scripts/build/styles.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./vendor/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./vendor/slick-theme.css" />
+    <title>Minas Turismo</title>
 </head>
 
 <body>
@@ -21,30 +22,37 @@
         <label for="nav-toggle" class="nav-toggle-label">
       <span></span>
     </label>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-        <li class="nav-item">
-          <a class="nav-link" href="#blog">Sobre MG </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#form">Recomende um Destino</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link form-call-btn" href="#calculadora">Calcule o valor da sua viagem</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="landing-page">
-      <h1 class="landing-title">Venha descobrir Minas Gerais!</h1>
-      <p>
-        Em Minas você vai desfrutar de queijos artesanais, doces fantasticos,
-        bares celebres, cachoeiras de tirar o folego e muito mais!
-      </p>
-      <div class="search-box">
-        <span class="container">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="#procurados">Mais Procurados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#atracoes">Atrações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hospedagens">Hospedagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Sobre MG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#calculadora">Calculadora</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link recomendation-btn" href="#recomende">Recomende um Destino</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="landing-page">
+            <h1 class="landing-title">Venha descobrir Minas Gerais!</h1>
+            <p>
+                Em Minas você vai desfrutar de queijos artesanais, doces fantasticos, bares celebres, cachoeiras de tirar o folego e muito mais!
+            </p>
+            <div class="search-box">
+                <span class="container">
           <input type="text" class="search-text" placeholder="Pesquisar..." id="search" />
           <label for="search">
             <i class="fas fa-search"></i>
@@ -52,13 +60,9 @@
         </span>
                 <span class="results" id="searchResultBox">
           <span class="result-count">0 resultados encontrados:</span>
-        </span>
-      </div>
-    </section>
-
-    <section class="blog" id="blog">
-      <h1>Sobre MG</h1>
-      <div class="blog-container">
+                </span>
+            </div>
+        </section>
 
         <div class="slider-section">
             <h1>Mais Procurados</h1>
@@ -371,21 +375,18 @@
             <button class="calc-btn" id="submitCalc">CALCULAR</button>
         </section>
 
-    <section class="contact">
-      <div class="contact-cover">
-      </div>
-      <div class="form">
-        <h1>Recomende um destino</h1>
-        <p>Preencha o formulario para nos enviar uma recomendação por e-mail!!</p>
-        <form action="/" method="post" id="form"> 
-          <input class="contact-ipt" type="text" name="name" id="name_ipt" placeholder="Seu nome completo" required>
-          <input class="contact-ipt" type="email" name="email" id="email_ipt" placeholder="Seu E-mail" required>
-          <input class="contact-ipt" type="text" name="subject" id="subject_ipt" placeholder="Assunto" required>
-          <input class="contact-ipt" type="text" name="message" id="message_ipt" placeholder="Digite aqui..." required>
-          <button class="form-btn" type="submit" id="btn_email" onclick="run">Enviar</button>
-      </form>
-      </div>
-    </section>
+        <section class="contact">
+            <div class="contact-cover">
+            </div>
+            <div class="form">
+                <h1>Envie sua recomendação</h1>
+                <input type="text" name="name" id="name-ipt" class="contact-ipt" placeholder="Seu nome completo">
+                <input type="email" name="email" id="email-ipt" class="contact-ipt" placeholder="Seu e-mail">
+                <input type="text" name="subject" id="subject-ipt" class="contact-ipt" placeholder="Assunto">
+                <input type="text" name="message" id="message-ipt" class="contact-ipt" placeholder="Digite aqui...">
+                <button class="form-btn">ENVIAR</button>
+            </div>
+        </section>
 
         <section class="about-us">
             <h1>Sobre Nós</h1>
