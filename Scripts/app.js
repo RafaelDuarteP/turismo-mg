@@ -14,7 +14,7 @@ $(document).ready(function(){
           }).fail(function(error) {
             window.alert("Algo deu errado, favor conferir se todos os campos foram preenchidos corretamente.");
           }).then( function (success){
-            window.alert(success)
+            window.alert("E-mail enviado com sucesso");
             location.reload()
           });
     }
